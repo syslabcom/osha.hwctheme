@@ -1,0 +1,762 @@
+body{
+
+color: #505152;
+
+}
+
+
+a {
+    color: #003298;
+    text-decoration: none;
+}
+
+
+
+#footer {
+	background: url(../theme_files/images/footer.png) no-repeat bottom center #ABC600;
+	/*background-size: contain;*/
+	border-top: 10px solid #DDE898;
+	min-height: 120px;
+	text-align: center;
+}
+
+#header-wrapper, #columns-container, #menu .navbar{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+h1{
+text-align: center;}
+
+
+/**********header************/
+
+
+#language-search {
+    background-color: #DFE0E0;
+	text-align: right;
+    padding: 10px 0;
+	font-size: 11px;
+}
+
+.form-search{
+	float: right;
+	margin:0;
+	margin-left: 2em;
+	}
+	
+.form-search input[type="text"]{
+    border-radius: 15px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 0px;
+    padding: 4px 6px;
+    vertical-align: middle;
+	width: 170px;
+	background: url(../theme_files/images/search.gif) no-repeat right 5px #fff;
+	box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.3);
+	border: 0;
+}
+
+#header{
+	background: url(../theme_files/images/header.gif) repeat-x top left;
+	
+	}
+
+#header select{
+	margin:0;
+	width: auto;
+	background: transparent;
+	border:0;
+	margin-right: 5px;
+	font-weight: bold;
+	font-size: 12px;
+	}
+	
+#header select option{
+	padding-right: 5px;
+	
+	}
+	
+	
+
+
+#portal-logo{
+	position: absolute;
+	top:0;
+	
+}
+
+#osha-logo{
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	}
+	
+#tagline{
+	padding: 43px 0 20px 0px;
+	font-family: 'PT Sans', sans-serif;
+	color: #003298;
+	font-weight: bold;
+	font-size: 110%;
+	line-height: 130%;
+}
+#tagline p{
+	margin:0;
+}
+.tagline1{
+	font-size: 100%;
+	padding-left: 30px;
+	color: #505152;
+	}
+
+	
+	/**plone class**/
+.hiddenStructure {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    height: 0.1em;
+    margin: -0.1em 0 0 -0.1em;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+}
+
+#menu{
+	background: #ABC600;
+	text-transform: uppercase;
+	margin-top: 3px;
+	}
+
+	
+.navbar-inner {
+    background-color:  #ABC600;
+    background-image:none;
+    border: 0;
+    border-radius:0;
+    box-shadow: none;
+    min-height: 40px;
+    padding-left: 0px;
+    padding-right: 0px;
+	  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABC600', endColorstr='#ABC600', GradientType=0);
+  *zoom: 1;
+}
+.navbar .nav > li > a {
+    color: #fff;
+    float: none;
+    padding: 0 15px;
+	margin: 10px 0px;
+    text-decoration: none;
+    text-shadow: none;
+	font-weight: bold;
+	border-right: 1px solid #fff;
+	line-height: 110%;
+	height: 30px;
+}
+.navbar .nav > li {
+	
+	text-align: center;
+}
+
+.navbar .nav > li:last-child > a {
+	border-right: 0px solid #fff;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background-color: #ABC600;
+    box-shadow: none;
+    color: #555555;
+    text-decoration: none;
+}
+
+
+.dropdown-menu {
+    padding: 10px;
+	font-size: 90%;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #ABC600;
+}
+
+.dropdown-menu > li > a {
+    padding: 5px 20px;
+}
+
+.dropdown-menu li:last-child{
+    border-bottom: 0;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color:  #ABC600;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABC600', endColorstr='#ABC600', GradientType=0);
+  *zoom: 1;
+  background-image:none;
+ 
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus,
+.navbar .btn-navbar:hover,
+.navbar .btn-navbar:focus,
+.navbar .btn-navbar:active,
+.navbar .btn-navbar.active,
+.navbar .btn-navbar.disabled,
+.navbar .btn-navbar[disabled],
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle{
+ 
+  background-color: #ABC600;
+  *background-color: #ABC600;
+} 
+
+
+/*************BigBanner*********************/
+
+#banner{
+	
+	
+	margin-top: 1em;
+	position: relative;
+}
+
+
+#banner .btn{
+	margin-top: 1em;
+}
+
+.banner-image{
+}
+
+.banner-text{
+	position: absolute;
+	right: 20px;
+	top: 1px;
+	background: url(../theme_files/images/bannerCopy.png) no-repeat scroll right top transparent;
+	height: 467px;
+	padding: 10px 20px 0 150px;
+	text-align: center;
+	line-height: 180%;
+	}
+
+.banner-text h2{
+	padding-top: 150px;
+	background: url(../theme_files/images/toolkit.png) no-repeat scroll center top transparent;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	}
+
+.news-events, .partners {
+	margin:2em 0 0 0;
+	}
+	
+/*************News-Events*********************/
+
+.news-events h2, .partners h2, #content h1{
+	border-radius: 30px 30px 0 0 ;
+	background: #ABC600;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	padding: 5px 20px;
+	margin:0;
+	}
+	
+.news-events .item {
+	background:#f2f7d8;
+	padding: 15px;
+	}
+	
+.first {
+	border-bottom: 1px solid #ABC600;
+	
+	}	
+.news-events .item h3{
+	font-size: 1.3em;
+	line-height: 140%;
+	margin: 0 0 20px 0;
+	}
+
+.news-events .item img{
+	
+	margin:0px 10px 15px 0;
+	}
+	
+.news-events .item .data{
+	margin:5px 0;
+	}
+	
+.databox {
+	background:#ABC600;
+	color: #fff;
+	margin: 5px 10px 15px 0;
+	width: 120px;
+	height: 125px;
+	padding: 0 5px 5px 5px;
+	text-transform: uppercase;
+	font-family: 'PT Sans',sans-serif;
+	}
+.databox p{
+	margin:0;
+	line-height: 140%
+	}	
+
+.databox p.day{
+	font-size: 250%;
+	font-weight: bold;
+	
+	}
+
+.databox p.mounth{
+	font-size: 120%;
+	
+	}
+.databox p.year{
+	font-weight: bold;
+	font-size: 120%;
+	}	
+
+	
+.news-events .btn{
+	font-size: 120%;
+	background: #58585a;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	font-size: 14px;
+	line-height: 20px;
+	float: right;
+	margin: 10px 0;
+	text-shadow: none;
+	background-image:none;
+	border:0;
+	-webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+          box-shadow: none;
+	}
+.news-events .btn:hover{	
+	background: #666;
+	}	
+	
+	
+/************partners**********/
+.partners .nav-pills > li {
+    float: left;
+    width: 16.2%;
+	text-align: center;
+	margin-right: 0.5%;
+	text-transform: uppercase;
+}
+
+
+.partners .nav-pills > li > a {
+    border-radius: 0;
+    margin-bottom: 2px;
+    margin-top: 7px;
+    padding-bottom: 0px;
+    padding-top: 8px;
+	min-height: 35px;
+	border-bottom: 3px solid #ABC600;
+	color: #ABC600;
+}
+
+.partners .nav-pills > li:last-child{
+	margin-right: 0 !important;
+}
+
+.partners .nav-pills > .active > a, 
+.partners .nav-pills > .active > a:hover, 
+.partners .nav-pills > .active > a:focus {
+    background-color: #fff;
+    color: #58585a !important;
+	border-bottom: 3px solid #58585a;
+}
+
+.partners .nav-pills > .active > a:hover, .partners .nav-pills > li > a:hover{
+	background-color: #fff;
+	 color: #58585a !important;
+	 border-bottom: 3px solid #58585a;
+}
+.enterprises{
+	background: url(../theme_files/images/partnerslogos.gif) no-repeat scroll 0 -138px transparent;
+	 background-size: 100%;
+	 height: 380px;
+	}
+	
+	
+	/******footer*******/
+	
+#footer ul li{
+	
+}
+
+#footer ul {
+	margin: 2em auto 0;
+	display: inline-block
+}
+
+#footer a {
+	color: #fff;
+}
+
+#footer .nav-pills > li > a {
+    border-radius: 0;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+	border-right: 1px solid #fff;
+}
+
+#footer .nav-pills > li > a {
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#footer .nav-pills > .active > a:hover, #footer .nav-pills > li > a:hover{
+    background: #ABC600 !important;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABC600', endColorstr='#ABC600', GradientType=0); *zoom: 1;
+	color: #58585a !important;
+}
+
+
+/*************content*************/
+
+#beadcrumb{
+	
+	margin: 1em 20px 0 20px;
+	font-size: 90%;
+	
+}
+
+#beadcrumb a{
+	color: #505152;
+
+}
+#introducction h1{
+    font-size: 28px;
+	color: #505152;
+}
+
+#intro-image{
+   margin: 1.5em 0;
+}
+
+
+#introducction, #content{
+    font-size: 120%;
+	line-height: 150%;
+}
+
+#introducction{
+   margin-bottom: 1em;
+}
+
+#introducction li{
+	font-weight: bold;
+	list-style: none;
+	background: url(../theme_files/images/introicon.gif) no-repeat left 4px transparent;
+	padding-left: 22px;
+	margin-bottom: 1em;
+	
+}
+
+
+
+
+/******************SubContent*******************/
+
+
+#content li{  
+	line-height: 150%;	
+}
+
+
+#content h1{  
+	border-radius: 30px 30px 0 0 ;
+	background: #b0b1b2;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	padding: 8px 20px;
+	margin:1em 0;
+	}
+
+	
+#content h2{  
+	font-size: 26px;
+	}
+	
+#content strong{  
+	font-size: 110%;
+	}
+	
+#content li{  
+	margin-bottom: 1em;
+	}
+
+#more-content{
+	background: #efefef;
+	margin-top: 3em;
+	
+}	
+	
+#more-content h2{
+	background: #b1b3b4;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	border-radius: 20px;
+	padding: 1px 20px;
+	margin-top: -1em;
+	
+}
+
+#content-image{
+	margin-bottom: 1em;
+}
+
+#more-content .item{	
+	padding: 0 2em 1em 2em;	
+}	
+
+#more-content li{
+	font-size: 90%;
+	list-style: none;
+	background: url(../theme_files/images/contenticon.gif) no-repeat left 2px transparent;
+	padding-left: 22px;
+	margin-bottom: 0;
+}
+
+#more-content li a{
+	color: #505152;
+}
+
+
+/********responsive videoa***********/
+
+.video-container{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    z-index: 0;
+}
+.video-container iframe, .video-container object, .video-container embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1015px) {
+#tagline {
+    padding-top: 47px;
+    font-size: 100%;
+
+}
+
+
+@media (max-width: 1200px) {
+.banner-text{
+	background: url(../theme_files/images/bannerCopy.png) no-repeat scroll right top transparent;
+	padding: 10px 20px 0 100px;
+	max-height: 400px;
+	}
+
+.banner-text h2{
+	padding-top: 100px;
+	background-size: 50%;
+	}
+	
+#banner {
+   
+}
+
+#footer {
+   background-size: contain;	
+}
+
+
+}
+  
+  @media (max-width: 979px) {
+  
+#portal-logo {
+    width: 140px;
+	
+}
+.banner-text{
+	background: #fff;
+	padding: 10px 10px 0 10px;
+	width: 220px !important;
+	line-height: 160%;
+	height: 326px;
+	border-radius: 0 0 15px 15px
+	}
+
+.banner-text h2{
+	padding-top: 65px;
+	background-size: 35%;
+	margin-top: 0;
+	margin-bottom: 0px;
+	}
+	
+#banner {
+    height: 320px;  
+	
+}
+
+
+#banner .btn {
+    margin-top: 5px;
+}
+
+.nav-collapse .nav > li > a:hover,
+.nav-collapse .nav > li > a:focus,
+.nav-collapse .dropdown-menu a:hover,
+.nav-collapse .dropdown-menu a:focus {
+    color: #666
+  }
+  
+.nav-collapse .nav {
+    margin: 5px;
+}
+
+.navbar .nav > li > a {
+    border-right: 0;
+}
+
+.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+    padding: 5px 15px;
+}
+
+.navbar .nav > li > a { 
+    padding: 5px 15px;
+}
+
+.partners .row-fluid .span2 {
+    width: 30% !important;
+	display: inline !important;
+	float: left;
+}
+}
+  
+  
+  
+@media (max-width: 480px) {
+
+
+#portal-logo {
+    width: 31%;
+}
+
+#tagline.offset2{
+  margin: 0 0 0 !important;
+  padding: 90px 0 10px;
+ 
+}
+.form-search {
+    display: none;
+}
+
+
+.navbar-language {
+    padding: 5px 0;
+}
+
+#osha-logo {
+	width: 50%;
+	  margin-top: 5px;
+}
+
+
+#tagline {
+    padding: 75px 0 10px 0px;
+}
+
+#banner {
+    height: auto;
+}
+
+.banner-image{
+	height:190px;
+	
+	}
+
+.banner-text{
+	position: relative;
+	float: left;
+	display: block;
+	width: 100% !important;
+	background: url(../theme_files/images/bannerCopy.png) no-repeat scroll right top transparent;
+	height:auto;
+	padding: 0px 20px;
+	margin-top: 20px;
+	text-align: left;
+	line-height: 180%;
+	right:0;
+	}
+
+.banner-text h2 {
+    background: url("../theme_files/images/toolkit.png") no-repeat scroll left top transparent;
+	background-size: 18%;
+	line-height: 400%;
+    font-size: 1.2em;
+    padding-top: 0px;
+	padding-left: 80px;
+    text-transform: uppercase;
+}
+	
+
+
+#footer ul {
+	margin: 0.5em auto 0;
+}
+
+.partners .nav-pills > li {
+    display: inline-block;
+    float: none;
+    width: 100%;
+}
+
+
+}

@@ -1,0 +1,21 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="osha.hwctheme">
+
+  <plone:static
+    name="osha.hwctheme"
+    directory="theme"
+    type="theme"
+    />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="osha.hwctheme"
+    directory="profiles/default"
+    description="Installs the OSHA HWC Theme"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+
+</configure>
