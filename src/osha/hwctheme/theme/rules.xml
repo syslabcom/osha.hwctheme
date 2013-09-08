@@ -7,4 +7,8 @@
     <replace theme="/html/head/base" content="/html/head/base"/>
     <replace theme="/html/head/title" content="/html/head/title"/>
 
+    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>
+    <replace css:theme-children="div.intro-left" css:content-children="div#content-core"/>
+    <replace css:theme="div.intro-right ul" css:content="dl.portletNavigationTree ul"/>
+
 </rules>
