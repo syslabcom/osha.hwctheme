@@ -7,12 +7,24 @@
     <replace theme="/html/head/base" content="/html/head/base"/>
     <replace theme="/html/head/title" content="/html/head/title"/>
 
-    <!-- Navigation tabs-->
-    <replace css:theme="ul.nav" css:content="ul.nav"/>
+    <!-- Breadcrumbs -->
+    <drop css:content="span#breadcrumbs-you-are-here" />
+    <replace css:content="span.breadcrumbSeparator">::</replace>
+    <replace css:theme-children="div#beadcrumb" css:content-children="div#portal-breadcrumbs" />
 
+    <!-- Navigation tabs -->
+    <replace css:theme="ul#portal-globalnav" css:content="ul#portal-globalnav"/>
 
-    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>
+    <!-- Footer actions -->
+    <replace css:theme-children="div#footer ul" css:content-children="ul#portal-siteactions"/>
+
+    <!-- Content title -->
+    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>    
+
+    <!-- Content -->
     <replace css:theme-children="div.intro-left" css:content-children="div#content-core"/>
-    <replace css:theme="div.intro-right ul" css:content="dl.portletNavigationTree ul"/>
+
+    <!-- Content navigation -->
+    <replace css:theme="ul#contentnav" css:content="dl.portletNavigationTree ul"/>
 
 </rules>
