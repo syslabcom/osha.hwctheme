@@ -1,5 +1,6 @@
 <configure
   xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
   xmlns:plone="http://namespaces.plone.org/plone"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="osha.hwctheme">
@@ -17,5 +18,10 @@
     description="Installs the OSHA HWC Theme"
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
+    
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <browser:jbot
+    directory="templates" />    
 
 </configure>
