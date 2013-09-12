@@ -12,6 +12,9 @@
     <replace css:content="span.breadcrumbSeparator">::</replace>
     <replace css:theme-children="div#beadcrumb" css:content-children="div#portal-breadcrumbs" />
 
+    <!-- Search form -->
+    <copy css:theme="form.form-search" css:content="div#portal-searchbox form" attributes="action"/>
+
     <!-- Navigation tabs -->
     <replace css:theme="ul#portal-globalnav" css:content="ul#portal-globalnav"/>
 
