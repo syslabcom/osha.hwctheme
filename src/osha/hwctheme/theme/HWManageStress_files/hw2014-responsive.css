@@ -36,7 +36,7 @@
     width: 140px;
 	
 }
-.banner-text{
+.banner-text, .banner-text1{
 	background: #fff;
 	padding: 10px 10px 0 10px;
 	width: 220px !important;
@@ -47,6 +47,14 @@
 	border-radius: 0 0 15px 15px;
 	behavior: url(./HWManageStress_files/PIE.htc);
 	}
+	
+.banner-text1 img{
+	width: 35%;
+	}
+	
+.banner-text1 p {  
+    font-size: 110%; 
+}
 
 .banner-text h2{
 	padding-top: 65px;
@@ -171,7 +179,7 @@
 	float: none;
 	}
 
-.banner-text{
+.banner-text, .banner-text1{
 	position: relative;
 	float: left;
 	display: block;
@@ -183,6 +191,16 @@
 	right:0;
 	height: auto;
 	}
+	
+.banner-text1 p{
+	text-align:center;
+	font-size: 125%;
+	}
+	
+.banner-text1 img{
+	display: none;
+	}
+
 
 .banner-text h2 {
 	background: url("../HWManageStress_files/images/toolkit.png") no-repeat scroll center top transparent;

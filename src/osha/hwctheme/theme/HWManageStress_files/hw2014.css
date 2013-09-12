@@ -10,7 +10,7 @@ a {
 }
 
 h1{
-	text-align: center;
+	/*text-align: center;*/
 }
 
 #footer {
@@ -233,7 +233,7 @@ h1{
 .banner-image{
 }
 
-.banner-text{
+.banner-text, .banner-text1{
 	position: absolute;
 	right: 20px;
 	top: 1px;
@@ -244,6 +244,25 @@ h1{
 	line-height: 180%;
 	}
 
+.banner-text1{
+	padding: 10px 20px 0 100px;
+	}	
+
+.banner-text1 img{
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	}	
+	
+.banner-text1 p{
+	font-size: 130%;
+	text-align: right;
+	color: #ABC600;
+	font-family: verdana;
+	font-style: italic;
+	margin-top: 10px;
+	
+	}
 .banner-text h2{
 	padding-top: 150px;
 	background: url(../HWManageStress_files/images/toolkit.png) no-repeat scroll center top transparent;
@@ -378,7 +397,7 @@ h1{
     padding-bottom: 0px;
     padding-top: 8px;
 	min-height: 35px;
-	border-bottom: 3px solid #ABC600;
+	border-bottom: 4px solid #ABC600;
 	color: #ABC600;
 }
 
@@ -387,13 +406,13 @@ h1{
 .partners-menu .nav-pills > .active > a:focus {
     background-color: #fff;
     color: #58585a !important;
-	border-bottom: 3px solid #58585a;
+	border-bottom: 4px solid #58585a;
 }
 
 .partners-menu .nav-pills > .active > a:hover, .partners-menu .nav-pills > li > a:hover{
 	background-color: #fff;
 	 color: #58585a !important;
-	 border-bottom: 3px solid #58585a;
+	 border-bottom: 4px solid #58585a;
 }
 
 	
@@ -434,7 +453,7 @@ h1{
 }
 
 
-/*************content*************/
+/*************Section*************/
 
 #beadcrumb{
 	margin: 1em 20px 0 20px;
@@ -480,23 +499,24 @@ h1{
 
 
 
-/******************SubContent*******************/
+/******************SubSection*******************/
 
-#content li{  
+#content li{ 
 	line-height: 150%;	
 }
 
 #content h1{  
-	-webkit-border-radius: 30px 30px 0 0;
-	-moz-border-radius: 30px 30px 0 0;
-	border-radius: 30px 30px 0 0;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 	behavior: url(./HWManageStress_files/PIE.htc);
-	background: #b0b1b2;
+	background: #B1B3B4;
 	color: #fff;
-	font-size: 1em;
+	font-size: 1.2em;
 	text-transform: uppercase;
-	padding: 5px 20px;
+	padding: 2px 20px 0;
 	margin:1em 0;
+	line-height: 36px;
 	}
 
 #content h2{  
@@ -520,6 +540,7 @@ h1{
 	
 #more-content h2{
 	background: #b1b3b4;
+	line-height: 36px;
 	color: #fff;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -553,7 +574,7 @@ h1{
 }
 
 
-/********responsive video***********/
+/********Responsive video***********/
 
 .video-container{
     height: 0;
@@ -636,5 +657,23 @@ h1{
 #material .row-fluid .span1{
 	margin-left: 0;
 }
+
+
+/************Photo Gallery**************/
+
+.thumbnail h3{
+	font-size: 100%;
+	margin-bottom: 5px;
+	line-height: 120%;
+	padding: 0 10px;
+}
+
+.thumbnail p{
+	font-size: 80%;
+	margin-bottom: 5px;
+	line-height: 140%;
+	padding: 0 10px;
+}
+
 
 
