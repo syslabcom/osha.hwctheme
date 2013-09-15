@@ -2,7 +2,7 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <!--<theme href="HWManageStress.htm" css:if-content="body.section-front-page"/>-->
+    <theme href="HWManageStress.htm" css:if-content="body.section-front-page"/>
     <theme href="HWManageStressContent.htm" css:if-content="body.portaltype-folder"/>
     <theme href="HWManageStressSubContent.htm" css:if-content="div#visual-portal-wrapper" />
     
@@ -38,4 +38,9 @@
     <!-- Content navigation -->
     <replace css:theme="ul#contentnav" css:content="dl.portletNavigationTree ul"/>
 
+    <!-- Front page news -->
+    <replace theme-children="//div[@class='news first item']/div[@class='row-fluid']" css:content-children="dl.portletNews .portletItem.odd"/>
+    <replace theme-children="//div[@class='news item']/div[@class='row-fluid']" css:content-children="dl.portletNews .portletItem.even"/>
+    <copy css:theme="#morenews" css:content="#morenews" attributes="href" />
+    
 </rules>
