@@ -14,6 +14,9 @@
     <replace css:content="span.breadcrumbSeparator">::</replace>
     <replace css:theme-children="div#beadcrumb" css:content-children="div#portal-breadcrumbs" />
 
+    <!-- Language selector -->
+    <replace css:theme-children="div#language ul.dropdown-menu" css:content-children="ul#portal-languageselector" />
+
     <!-- Search form -->
     <copy css:theme="form.form-search" css:content="div#portal-searchbox form" attributes="action"/>
 
