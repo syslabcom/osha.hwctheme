@@ -41,5 +41,11 @@
     <!-- Frontpage news -->
     <replace css:theme-children="div.news.first.item div.row-fluid" css:content="dl.portletNews dd.portletItem.odd"/>
     <replace css:theme-children="div.news.last.item div.row-fluid" css:content="dl.portletNews dd.portletItem.even"/>
+    <copy css:theme="a#news-btn" css:content="dl.portletNews dd.portletFooter a" attributes="href"/>
+
+    <!-- Frontpage events -->
+    <replace css:theme-children="div.event.first.item div.row-fluid" css:content="dl.portletEvents dd.portletItem.odd"/>
+    <replace css:theme-children="div.event.last.item div.row-fluid" css:content="dl.portletEvents dd.portletItem.even"/>
+    <copy css:theme="a#events-btn" css:content="dl.portletEvents dd.portletFooter a" attributes="href"/>
 
 </rules>
