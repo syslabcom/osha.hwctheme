@@ -33,8 +33,31 @@ h1{
     background-color: #DFE0E0;
 	text-align: right;
     padding: 10px 0;
-	font-size: 11px;
+	font-size: 12px;
 }
+
+#language{
+  margin-top: 3px;
+}
+
+#language-search ul{
+    margin-bottom: 0;
+	margin-left: 5px;
+	text-align: left;
+	font-size: 100% !mportant;
+}
+
+#language-search ul li a:hover, #language-search ul li a:focus{
+   background: transparent;
+   color: #333;
+}
+
+#language-search ul li li a:hover, #language-search ul li li a:focus{
+   background: #ABC600;
+   color: #fff;
+}
+
+
 
 .form-search{
 	float: right;
@@ -126,7 +149,7 @@ h1{
 #menu{
 	background: #ABC600;
 	text-transform: uppercase;
-	margin-top: 4px;
+	margin-top: 10px;
 	}
 
 .navbar-inner {
@@ -162,6 +185,10 @@ h1{
 	text-align: center;
 }
 
+.navbar .nav > li li{	
+	text-align: left;
+}
+
 .navbar .nav > li:last-child > a {
 	border-right: 0px solid #fff;
 }
@@ -173,7 +200,7 @@ h1{
     text-decoration: none;
 }
 
-.dropdown-menu {
+#menua .dropdown-menu {
     padding: 10px;
 	font-size: 90%;
 }
