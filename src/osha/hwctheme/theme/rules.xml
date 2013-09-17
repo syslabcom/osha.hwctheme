@@ -16,6 +16,7 @@
 
     <!-- Language selector -->
     <replace css:theme-children="div#language ul.dropdown-menu" css:content-children="ul#portal-languageselector" />
+    <replace css:theme-children="div#language a.dropdown-toggle" css:content-children="ul#portal-languageselector li.currentLanguage a" />
 
     <!-- Search form -->
     <copy css:theme="form.form-search" css:content="div#portal-searchbox form" attributes="action"/>
