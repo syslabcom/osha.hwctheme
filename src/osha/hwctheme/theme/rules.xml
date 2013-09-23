@@ -14,6 +14,10 @@
     <replace css:content="span.breadcrumbSeparator">::</replace>
     <replace css:theme-children="div#beadcrumb" css:content-children="div#portal-breadcrumbs" />
 
+    <!-- Language selector -->
+    <replace css:theme-children="div#language ul.dropdown-menu" css:content-children="ul#portal-languageselector" />
+    <replace css:theme-children="div#language a.dropdown-toggle" css:content-children="ul#portal-languageselector li.currentLanguage a" />
+
     <!-- Search form -->
     <copy css:theme="form.form-search" css:content="div#portal-searchbox form" attributes="action"/>
 
@@ -38,9 +42,14 @@
     <!-- Content navigation -->
     <replace css:theme="ul#contentnav" css:content="dl.portletNavigationTree ul"/>
 
-    <!-- Front page news -->
-    <replace theme-children="//div[@class='news first item']/div[@class='row-fluid']" css:content-children="dl.portletNews .portletItem.odd"/>
-    <replace theme-children="//div[@class='news item']/div[@class='row-fluid']" css:content-children="dl.portletNews .portletItem.even"/>
-    <copy css:theme="#morenews" css:content="#morenews" attributes="href" />
-    
+    <!-- Frontpage news -->
+    <replace css:theme-children="div.news.first.item div.row-fluid" css:content="dl.portletNews dd.portletItem.odd"/>
+    <replace css:theme-children="div.news.last.item div.row-fluid" css:content="dl.portletNews dd.portletItem.even"/>
+    <copy css:theme="a#news-btn" css:content="dl.portletNews dd.portletFooter a" attributes="href"/>
+
+    <!-- Frontpage events -->
+    <replace css:theme-children="div.event.first.item div.row-fluid" css:content="dl.portletEvents dd.portletItem.odd"/>
+    <replace css:theme-children="div.event.last.item div.row-fluid" css:content="dl.portletEvents dd.portletItem.even"/>
+    <copy css:theme="a#events-btn" css:content="dl.portletEvents dd.portletFooter a" attributes="href"/>
+
 </rules>

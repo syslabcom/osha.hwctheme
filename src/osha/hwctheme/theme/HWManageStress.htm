@@ -32,20 +32,29 @@
 	<div id="header-wrapper" class="container-fluid">
 		<div id="language-search" class="row-fluid">
 		
-				Select your language: 
-				<select>
-				<option>English</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-				</select>
-		  
 		  <form class="form-search">
 			<form class="form-search">
 			<input type="text" class="input-medium search-query" name="SearchableText">
 		
 		</form>
+	<div id="language">
+      Select your language: <ul class="nav pull-right">
+                     
+                      <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">English<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+							  <li><a href="#">Cestina</a></li>
+							  <li><a href="#">Dansk</a></li>
+							  <li><a href="#">Deutsch</a></li>         
+							  <li><a href="#">Español</a></li>
+							  <li><a href="#">Italiano</a></li>
+							</ul>
+                       
+                      </li>
+					  </ul>
+	</div>	  
+		
 
 		</div>
  
@@ -192,7 +201,7 @@ Campaign Toolkit website</a></p>
           </div>
 		  </div>
 		  
-		  <div class="news item">
+		  <div class="news last item">
 		  <div class="row-fluid">
 		  <h3><a href="#">Good health and safety is good for business</a></h3>
           <img class="pull-left" src="./HWManageStress_files/images/newsimage2.jpg">
@@ -200,7 +209,7 @@ Campaign Toolkit website</a></p>
 		  <p>EU-OSHA’s Healthy Workplaces Campaigns are its principal tools for raising awareness on occupational safety and health. The Campaigns, each of which runs for two years, involve hundreds of organisations from all of the EU Member States ...</p>
 		  </div>
 		  </div>
-		  <p class="row-fluid"><a class="btn" id="morenews" href="#">see all news</a></p>
+		  <p class="row-fluid"><a class="btn" id="news-btn" href="#">see all news</a></p>
         </div>
 		
         <div class="span6">
@@ -218,7 +227,7 @@ Campaign Toolkit website</a></p>
 		 </div>
 		  </div>
 		 
-		  <div class="event item">
+		  <div class="event last item">
 		  <div class="row-fluid">
 		  <h3><a href="#">Positive psychology at work - towards flourishing workplaces</a></h3>
           <div class="databox pull-left">
@@ -232,7 +241,7 @@ Campaign Toolkit website</a></p>
 		  
 		
 		  </div>
-		   <p class="row-fluid"><a class="btn" href="#">see all events</a></p>
+		   <p class="row-fluid"><a class="btn" id="events-btn" href="#">see all events</a></p>
        </div>
        
       </div>
