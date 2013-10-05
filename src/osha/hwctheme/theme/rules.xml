@@ -45,4 +45,10 @@
     <!-- Frontpage news-events -->
     <replace  css:if-content="body.template-hw2014_front_page" css:theme-children="div.news-events" css:content="div.news-events"/>
 
+    <!-- Related sites -->
+    <replace css:theme-children="div#relatedSites" css:content-children="div#relatedSites" />
+
+    <!-- See also -->
+    <replace css:theme-children="div#seeAlso" css:content-children="div#seeAlso" />
+
 </rules>
