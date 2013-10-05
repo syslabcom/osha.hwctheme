@@ -5,7 +5,7 @@
     <theme href="HWManageStress2.htm" css:if-content="body.template-hw2014_front_page"/>
     <theme href="HWManageStressContent.htm" css:if-content="body.portaltype-folder"/>
     <theme href="HWManageStressSubContent.htm" css:if-content="div#visual-portal-wrapper" />
-    
+
     <replace theme="/html/head/base" content="/html/head/base"/>
     <replace theme="/html/head/title" content="/html/head/title"/>
 
@@ -29,9 +29,9 @@
 
     <!-- Content title -->
     <!-- Content type-->
-    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>    
+    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>
     <!-- SubContent type-->
-    <replace css:theme="div#content h1" css:content="h1.documentFirstHeading"/>    
+    <replace css:theme="div#content h1" css:content="h1.documentFirstHeading"/>
 
     <!-- Main Content -->
     <!-- Content type-->
