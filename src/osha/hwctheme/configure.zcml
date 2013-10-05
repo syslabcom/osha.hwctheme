@@ -11,11 +11,6 @@
     type="theme"
     />
 
-  <browser:resource
-     name="osha.hwctheme.rules.xml"
-     file="rules.xml"
-     />
-
   <genericsetup:registerProfile
     name="default"
     title="osha.hwctheme"
