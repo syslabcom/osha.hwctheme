@@ -1,0 +1,3 @@
+[submodule "src/osha/hwctheme/theme"]
+	path = src/osha/hwctheme/theme
+	url = git@github.com:syslabcom/hw2014theme.git

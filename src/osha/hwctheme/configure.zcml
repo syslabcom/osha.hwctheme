@@ -11,6 +11,11 @@
     type="theme"
     />
 
+  <browser:resource
+     name="osha.hwctheme.rules.xml"
+     file="rules.xml"
+     />
+
   <genericsetup:registerProfile
     name="default"
     title="osha.hwctheme"
@@ -18,10 +23,10 @@
     description="Installs the OSHA HWC Theme"
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
-    
+
   <include package="z3c.jbot" file="meta.zcml" />
 
   <browser:jbot
-    directory="templates" />    
+    directory="templates" />
 
 </configure>
