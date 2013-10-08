@@ -33,7 +33,7 @@
             Plone 2.1 announced!
             </span>
         </a></h3>
-        <img tal:define="scales news_item/@@images;"
+        <img tal:define="scales news_item/@@images" tal:condition="python:news_item.image is not None"
              tal:replace="structure python: scales.tag('image', width=130, height=130, css_class='pull-left')" />
         <p class="portletItemDetails data"
               tal:content="python:toLocalizedTime(obj.Date)">May 5</p>
