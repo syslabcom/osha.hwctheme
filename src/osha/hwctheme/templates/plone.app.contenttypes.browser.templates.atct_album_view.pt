@@ -62,27 +62,37 @@
                             </a>
                             <div id="image-2" class="modal hide" data-backdrop="static" tabindex="-1"
                                  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-                                 tal:attributes="id string:image-${repeat/image/number}">
+                                 tal:attributes="id string:image-${repeat/image/number}"
+                                 tal:define="current repeat/image/number;
+                                             previous python:int(current) - 1;
+                                             next python:int(current) + 1;
+                                             img_tag python:scale.scale('image', scale='large').tag()">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h3 id="myModalLabel" tal:content="image/pretty_title_or_id">Title</h3>
+                                    <table>
+                                        <tr>
+                                            <td class="nav">
+                                                <a data-toggle="modal" data-dismiss="modal" href="#image-1"
+                                                   tal:attributes="href string:#image-${previous}"
+                                                   tal:condition="not:repeat/image/start">
+                                                    &laquo;
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <h3 id="myModalLabel" tal:content="image/pretty_title_or_id">Title</h3>
+                                            </td>
+                                            <td class="nav">
+                                                <a data-toggle="modal" data-dismiss="modal" href="#image-3"
+                                                   tal:attributes="href string:#image-${next}"
+                                                   tal:condition="not:repeat/image/end">
+                                                    &raquo;
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <div class="modal-body"
-                                     tal:define="current repeat/image/number;
-                                                 previous python:int(current) - 1;
-                                                 next python:int(current) + 1;
-                                                 img_tag python:scale.scale('image', scale='large').tag()">
-                                    <a data-toggle="modal" data-dismiss="modal" href="#image-1"
-                                       tal:attributes="href string:#image-${previous}"
-                                       tal:condition="not:repeat/image/start">
-                                        <img src="/lib/images/Arrow-Left.png" class="arrow" alt="&laquo;"/>
-                                    </a>
+                                <div class="modal-body">
                                     <img src="" alt="" tal:replace="structure img_tag" />
-                                    <a data-toggle="modal" data-dismiss="modal" href="#image-{{ forloop.counter + 1 }}"
-                                       tal:attributes="href string:#image-${next}"
-                                       tal:condition="not:repeat/image/end">
-                                        <img src="/lib/images/Arrow-Right.png" class="arrow" alt="&raquo;"/>
-                                    </a>
                                 </div>
                                 <div class="modal-footer">
                                     <p tal:content="image/Description">
