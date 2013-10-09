@@ -1,0 +1,158 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+
+<metal:main_macro define-macro="content-core"
+     tal:define="result python:view.getAlbumContent(images=1, folders=1, subimages=0, others=1);
+                 images result/images;
+                 albums result/folders;
+                 otherContents result/others;
+                 Batch python:modules['Products.CMFPlone'].Batch;
+                 b_start python:request.get('b_start', 0);
+                 kssClassesView context/@@kss_field_decorator_view;
+                 getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                 templateId template/getId;
+                 batch python:Batch(images, 12, int(b_start), orphan=1)">
+
+    <div metal:define-macro="text-field-view"
+         id="parent-fieldname-text" class="stx"
+         tal:define="kss_class python:getKssClasses('text',
+                     templateId=templateId, macro='text-field-view');
+                     has_text exists:context/aq_explicit/getText;
+                     text python:has_text and here.getText() or ''"
+         tal:condition="text"
+         tal:attributes="class python: here.Format() in ('text/structured',
+                                               'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
+        <div metal:define-slot="inside" tal:replace="structure text">The body</div>
+    </div>
+
+    <tal:albumsimages tal:condition="python:albums or images">
+        <ul class="thumbnails">
+            <tal:images tal:condition="batch" tal:repeat="image batch">
+            <div class="photoAlbumEntry">
+                <a tal:define="id python:int(b_start)+int(repeat['image'].number()-1);
+                               scale image/@@images;
+                               img_tag python:scale.scale('image', scale='thumb').tag()"
+                   tal:attributes="href string:${image/absolute_url}/view;
+                                   title image/Description">
+                    <span class="photoAlbumEntryWrapper">
+                        <img src="" alt="" tal:replace="structure img_tag" />
+                    </span>
+                    <span class="photoAlbumEntryTitle" tal:content="image/pretty_title_or_id">
+                       Title
+                    </span>
+                </a>
+                <tal:comment tal:replace="nothing">
+                    Admittedly this is rather hacky, but it works quite well: The li tags are invisible in the default theme
+                    due to already existing css (no changes made), but they are picked out by a diazo rule that specifically
+                    targets the lis and therefore drops the surrounding div. So this works both in default theme and in hwctheme.
+                </tal:comment>
+                <li class="photoAlbumEntry span4"
+                    tal:define="id python:int(b_start)+int(repeat['image'].number()-1);
+                                   scale image/@@images;
+                                   img_tag python:scale.scale('image', scale='preview').tag()">
+                        <div class="thumbnail">
+                            <a tal:attributes="href string:#image-${repeat/image/number}" data-toggle="modal">
+                                <img src="" alt="" tal:replace="structure img_tag" />
+                            </a>
+                            <div id="image-2" class="modal hide" data-backdrop="static" tabindex="-1"
+                                 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                                 tal:attributes="id string:image-${repeat/image/number}">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3 id="myModalLabel" tal:content="image/pretty_title_or_id">Title</h3>
+                                </div>
+                                <div class="modal-body"
+                                     tal:define="current repeat/image/number;
+                                                 previous python:int(current) - 1;
+                                                 next python:int(current) + 1;
+                                                 img_tag python:scale.scale('image', scale='large').tag()">
+                                    <a data-toggle="modal" data-dismiss="modal" href="#image-1"
+                                       tal:attributes="href string:#image-${previous}"
+                                       tal:condition="not:repeat/image/start">
+                                        <img src="/lib/images/Arrow-Left.png" class="arrow" alt="&laquo;"/>
+                                    </a>
+                                    <img src="" alt="" tal:replace="structure img_tag" />
+                                    <a data-toggle="modal" data-dismiss="modal" href="#image-{{ forloop.counter + 1 }}"
+                                       tal:attributes="href string:#image-${next}"
+                                       tal:condition="not:repeat/image/end">
+                                        <img src="/lib/images/Arrow-Right.png" class="arrow" alt="&raquo;"/>
+                                    </a>
+                                </div>
+                                <div class="modal-footer">
+                                    <p tal:content="image/Description">
+                                       Description
+                                    </p>
+                                </div>
+                            </div>                            
+                            <h3 tal:content="image/pretty_title_or_id">An Image</h3>
+                            <p tal:content="image/Description">
+                               Description
+                            </p>
+                        </div>
+                </li>
+            </div>
+            </tal:images>
+        </ul>
+
+        <div class="photoAlbum" tal:condition="albums">
+        <tal:albums tal:repeat="album albums">
+
+            <div class="photoAlbumEntry photoAlbumFolder"
+                 tal:define="image_brains_in_album python:view.getAlbumContent(subimages=1, container=album)['subimages'];
+                             number_of_images python:len(image_brains_in_album);
+                             random python:modules['random'];
+                             random_image python:number_of_images and random.choice(image_brains_in_album).getObject() or None">
+                        <a tal:attributes="href album/getURL;
+                                           title album/Description">
+                            <span class="photoAlbumEntryWrapper">
+                                <tal:block condition="number_of_images">
+                                <img src="" alt=""
+                                     tal:define="scale random_image/@@images;
+                                                 img_tag python:scale.scale('image', scale='thumb').tag()"
+                                     tal:replace="structure img_tag" />
+                                </tal:block>
+                            </span>
+                            <span class="photoAlbumEntryTitle">
+                               <tal:title content="album/pretty_title_or_id">Title</tal:title>
+                            (<tal:number content="number_of_images" />)
+                            </span>
+                        </a>
+            </div>
+
+        </tal:albums>
+        </div>
+
+        <div class="visualClear"><!-- --></div>
+
+    </tal:albumsimages>
+
+    <p class="discreet"
+       i18n:domain="atcontenttypes"
+       i18n:translate="text_no_albums_uploaded"
+       tal:condition="python:not (albums or images)">
+        No albums or photos uploaded yet.
+    </p>
+
+    <div tal:condition="python:albums or images"
+         metal:use-macro="here/batch_macros/macros/navigation" />
+
+    <tal:listing condition="otherContents"
+                 define="folderContents otherContents">
+        <metal:listing metal:use-macro="here/folder_listing/macros/listing">
+            <metal:empty metal:fill-slot="no_items_in_listing"></metal:empty>
+        </metal:listing>
+
+    </tal:listing>
+
+</metal:main_macro>
+</metal:content-core>
+
+</body>
+
+</html>
