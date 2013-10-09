@@ -1,0 +1,17 @@
+<div id="logo-container" i18n:domain="osha.hwctheme"
+     tal:define="lang context/@@plone_portal_state/language">
+  <a id="portal-logo" class="brand" href="/">
+    <img title="" alt="" src="/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"/>
+  </a>
+
+  <div id="osha-logo">
+    <a href="http://osha.europa.eu" target="_blank">
+      <img title="" alt="" src="/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logoosha.png"/>
+    </a>
+  </div>
+
+  <div id="tagline" class="offset2">
+    <p i18n:translate="">Healthy Workplaces Manage Stress.</p>
+    <p class="tagline1" i18n:translate="">Safety and health at work is everyone’s concern. It’s good for you. It’s good for business.</p>
+  </div>
+</div>
