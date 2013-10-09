@@ -24,4 +24,12 @@
   <browser:jbot
     directory="templates" />
 
+  <browser:viewlet
+    name="hwcheader"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    template="viewlets/hwcheader.pt"
+    permission="zope2.View"
+    />
+
 </configure>
