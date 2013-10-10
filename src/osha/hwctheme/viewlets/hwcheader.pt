@@ -3,7 +3,7 @@
        portal_url context/@@plone_portal_state/portal_url">
   <a id="portal-logo" class="brand" href="/">
     <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"
-         tal:attributes="src string:${portal_url}/++theme++osha.hwctheme/HWManageStress_files/images/logo_${lang}.png"/>
+         tal:attributes="src string:${portal_url}/++theme++osha.hwctheme/HWManageStress_files/images/logo_en.png"/>
   </a>
 
   <div id="osha-logo">
