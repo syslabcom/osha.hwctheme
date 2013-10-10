@@ -32,8 +32,7 @@
     </div>
 
     <tal:albumsimages tal:condition="python:albums or images">
-        <ul class="thumbnails">
-            <tal:images tal:condition="batch" tal:repeat="image batch">
+        <tal:images tal:condition="batch" tal:repeat="image batch">
             <div class="photoAlbumEntry">
                 <a tal:define="id python:int(b_start)+int(repeat['image'].number()-1);
                                scale image/@@images;
@@ -47,68 +46,8 @@
                        Title
                     </span>
                 </a>
-                <tal:comment tal:replace="nothing">
-                    Admittedly this is rather hacky, but it works quite well: The li tags are invisible in the default theme
-                    due to already existing css (no changes made), but they are picked out by a diazo rule that specifically
-                    targets the lis and therefore drops the surrounding div. So this works both in default theme and in hwctheme.
-                </tal:comment>
-                <li class="photoAlbumEntry span4"
-                    tal:define="id python:int(b_start)+int(repeat['image'].number()-1);
-                                   scale image/@@images;
-                                   img_tag python:scale.scale('image', scale='preview').tag()">
-                        <div class="thumbnail">
-                            <a tal:attributes="href string:#image-${repeat/image/number}" data-toggle="modal">
-                                <img src="" alt="" tal:replace="structure img_tag" />
-                            </a>
-                            <div id="image-2" class="modal hide" data-backdrop="static" tabindex="-1"
-                                 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-                                 tal:attributes="id string:image-${repeat/image/number}"
-                                 tal:define="current repeat/image/number;
-                                             previous python:int(current) - 1;
-                                             next python:int(current) + 1;
-                                             img_tag python:scale.scale('image', scale='large').tag()">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <table>
-                                        <tr>
-                                            <td class="nav">
-                                                <a data-toggle="modal" data-dismiss="modal" href="#image-1"
-                                                   tal:attributes="href string:#image-${previous}"
-                                                   tal:condition="not:repeat/image/start">
-                                                    &laquo;
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <h3 id="myModalLabel" tal:content="image/pretty_title_or_id">Title</h3>
-                                            </td>
-                                            <td class="nav">
-                                                <a data-toggle="modal" data-dismiss="modal" href="#image-3"
-                                                   tal:attributes="href string:#image-${next}"
-                                                   tal:condition="not:repeat/image/end">
-                                                    &raquo;
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="" alt="" tal:replace="structure img_tag" />
-                                </div>
-                                <div class="modal-footer">
-                                    <p tal:content="image/Description">
-                                       Description
-                                    </p>
-                                </div>
-                            </div>                            
-                            <h3 tal:content="image/pretty_title_or_id">An Image</h3>
-                            <p tal:content="image/Description">
-                               Description
-                            </p>
-                        </div>
-                </li>
             </div>
-            </tal:images>
-        </ul>
+        </tal:images>
 
         <div class="photoAlbum" tal:condition="albums">
         <tal:albums tal:repeat="album albums">
@@ -152,46 +91,6 @@
     <div tal:condition="python:albums or images"
          metal:use-macro="here/batch_macros/macros/navigation" />
 
-    <!-- custom batch navigation -->
-    <div class="pagination  pagination-centered"
-         tal:condition="batch/multiple_pages"
-         tal:define="batchnavigation nocall:here/@@batchnavigation;
-                     dummy python:batchnavigation(batch)">
-      <ul>
-        <li tal:condition="batch/has_previous">
-            <a href=""
-               tal:attributes="href python:batchnavigation.make_link(batch.previouspage)">
-               &laquo;
-            </a>
-        </li>
-
-        <!-- Pagelist with links to previous pages for quick navigation -->
-        <li tal:repeat="pagenumber batch/previous_pages">
-          <a href="" tal:content="pagenumber"
-             tal:attributes="href python:batchnavigation.make_link(pagenumber)"/>
-        </li>
-
-        <!-- Current page -->
-        <li class="active" tal:condition="batch/navlist">
-            <a tal:content="batch/pagenumber">Current page number</a>
-        </li>
-
-        <!-- Pagelist with links to next pages for quick navigation -->
-        <li tal:repeat="pagenumber batch/next_pages">
-          <a href="" tal:content="pagenumber"
-             tal:attributes="href python:batchnavigation.make_link(pagenumber)"/>
-        </li>
-
-        <li tal:condition="batch/has_next">
-            <a href=""
-               tal:attributes="href python:batchnavigation.make_link(batch.nextpage)">
-               &raquo;
-            </a>
-        </li>
-
-      </ul>
-    </div>
-
     <tal:listing condition="otherContents"
                  define="folderContents otherContents">
         <metal:listing metal:use-macro="here/folder_listing/macros/listing">
@@ -199,6 +98,114 @@
         </metal:listing>
 
     </tal:listing>
+
+    <div style="display: none">
+        <tal:albumsimages tal:condition="images" tal:repeat="row python:range((len(batch)+2)/3)">
+            <ul tal:condition="python:batch and len(batch)>=row*3+1" class="thumbnails">
+                <tal:images tal:repeat="image_no python:range(row*3+1,row*3+4)">
+                    <tal:image tal:condition="python:len(batch)>=image_no">
+                    <li class="photoAlbumEntry span4"
+                        tal:define="image python:batch[image_no-1];
+                                    id python:int(b_start)+int(image_no-1);
+                                    scale image/@@images;
+                                    img_tag python:scale.scale('image', scale='preview').tag()">
+                        <div class="thumbnail">
+                            <a tal:attributes="href string:#image-${image_no}" data-toggle="modal">
+                                <img src="" alt="" tal:replace="structure img_tag" />
+                            </a>
+                            <div id="image-2" class="modal hide" data-backdrop="static" tabindex="-1"
+                                 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                                 tal:attributes="id string:image-${image_no}"
+                                 tal:define="current image_no;
+                                             previous python:int(current) - 1;
+                                             next python:int(current) + 1;
+                                             img_tag python:scale.scale('image', scale='large').tag()">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <table>
+                                            <tr>
+                                                <td class="nav">
+                                                    <a data-toggle="modal" data-dismiss="modal" href="#image-1"
+                                                       tal:attributes="href string:#image-${previous}"
+                                                       tal:condition="python:current != 1">
+                                                        &laquo;
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <h3 id="myModalLabel" tal:content="image/pretty_title_or_id">Title</h3>
+                                                </td>
+                                                <td class="nav">
+                                                    <a data-toggle="modal" data-dismiss="modal" href="#image-3"
+                                                       tal:attributes="href string:#image-${next}"
+                                                       tal:condition="python:current != len(batch)">
+                                                        &raquo;
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="" alt="" tal:replace="structure img_tag" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <p tal:content="image/Description">
+                                           Description
+                                        </p>
+                                    </div>
+                                </div>
+                                <h3 tal:content="image/pretty_title_or_id">An Image</h3>
+                                <p tal:content="image/Description">
+                                   Description
+                                </p>
+                            </div>
+                    </li>
+                    </tal:image>
+                <!--/div-->
+                </tal:images>
+            </ul>
+        </tal:albumsimages>
+
+        <!-- custom batch navigation -->
+        <div class="pagination  pagination-centered"
+             tal:condition="batch/multiple_pages"
+             tal:define="batchnavigation nocall:here/@@batchnavigation;
+                         dummy python:batchnavigation(batch)">
+          <ul>
+            <li tal:condition="batch/has_previous">
+                <a href=""
+                   tal:attributes="href python:batchnavigation.make_link(batch.previouspage)">
+                   &laquo;
+                </a>
+            </li>
+
+            <!-- Pagelist with links to previous pages for quick navigation -->
+            <li tal:repeat="pagenumber batch/previous_pages">
+              <a href="" tal:content="pagenumber"
+                 tal:attributes="href python:batchnavigation.make_link(pagenumber)"/>
+            </li>
+
+            <!-- Current page -->
+            <li class="active" tal:condition="batch/navlist">
+                <a tal:content="batch/pagenumber">Current page number</a>
+            </li>
+
+            <!-- Pagelist with links to next pages for quick navigation -->
+            <li tal:repeat="pagenumber batch/next_pages">
+              <a href="" tal:content="pagenumber"
+                 tal:attributes="href python:batchnavigation.make_link(pagenumber)"/>
+            </li>
+
+            <li tal:condition="batch/has_next">
+                <a href=""
+                   tal:attributes="href python:batchnavigation.make_link(batch.nextpage)">
+                   &raquo;
+                </a>
+            </li>
+
+          </ul>
+        </div>
+    </div>
+
 
 </metal:main_macro>
 </metal:content-core>
