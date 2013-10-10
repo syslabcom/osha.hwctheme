@@ -1,14 +1,14 @@
 <div id="logo-container" i18n:domain="osha.hwctheme"
      tal:define="lang context/@@plone_portal_state/language">
   <a id="portal-logo" class="brand" href="/">
-    <img title="" alt="" src="/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"
-         tal:attributes="src string:/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logo_${lang}.png"/>
+    <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"
+         tal:attributes="src string:/++theme++osha.hwctheme/HWManageStress_files/images/logo_${lang}.png"/>
   </a>
 
   <div id="osha-logo">
     <a href="http://osha.europa.eu" target="_blank">
-      <img title="" alt="" src="/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logoosha.png"
-           tal:attributes="src string:/oshahwc2014/++theme++osha.hwctheme/HWManageStress_files/images/logoosha_${lang}.png"/>
+      <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logoosha.png"
+           tal:attributes="src string:/++theme++osha.hwctheme/HWManageStress_files/images/logoosha_${lang}.png"/>
     </a>
   </div>
 
