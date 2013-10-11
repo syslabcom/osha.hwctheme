@@ -157,6 +157,8 @@
                                 <p tal:content="image/Description">
                                    Description
                                 </p>
+                                <p><a tal:attributes="href string:${image/@@plone_context_state/object_url}/@@download/image">Download</a></p>
+
                             </div>
                     </li>
                     </tal:image>
