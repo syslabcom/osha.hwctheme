@@ -4,7 +4,7 @@
     <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
 
     <ul id="portal-globalnav" class="nav"
-        tal:define="selected_tab python:view.selected_portal_tab"
+        tal:define="helper context/@@hw_view; selected_tab python:view.selected_portal_tab"
         ><tal:tabs tal:repeat="tab portal_tabs"
         ><li tal:define="tid tab/id;
                          subitems python:view.getTabObject(tabUrl = tab['url'], tabPath = tab.get('path'));
@@ -13,7 +13,8 @@
                              class python:selected_tab==tid and 'dropdown selected' or 'dropdown plain'"
              
             ><a href=""
-               tal:content="tab/name"
+				tal:define="text tab/name"
+               tal:content="structure python:helper.break_in_lines(text, 22)[1]"
                tal:attributes="href tab/url;
                                title tab/description|nothing;
                                class python:item_clickable and 'dropdown-toggle plain' or 'dropdown-toggle noClick'">
