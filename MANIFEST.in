@@ -1,0 +1,6 @@
+include *.md
+include *.txt
+recursive-include src *.pt
+recursive-include src *.xml
+recursive-include src *.zcml
+recursive-include src *.html *.htm *.css *.js *.gif *.png *.jpg
