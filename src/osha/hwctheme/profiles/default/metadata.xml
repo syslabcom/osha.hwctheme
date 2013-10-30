@@ -4,5 +4,6 @@
   <dependencies>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-webcouturier.dropdownmenu:default</dependency>
+    <dependency>collective.mtrsetup:default</dependency>
   </dependencies>
 </metadata>

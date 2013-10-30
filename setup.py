@@ -34,6 +34,7 @@ setup(name="osha.hwctheme",
       zip_safe=False,
       install_requires=[
           "setuptools",
+          "collective.mtrsetup",
           "plone.api",
           "plone.app.contenttypes",
           "plone.namedfile[blobs]",
