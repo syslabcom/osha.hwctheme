@@ -43,11 +43,14 @@
       <div id="content-core" tal:define="my_profiles hw_view/get_my_profiles">
           <ul>
               <li tal:repeat="my_profile my_profiles">
-                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="my_profile/needs_completion">
-                      Click here to complete your profile "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
+                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] in ['pending', 'pending_phase_2']">
+                      Click here to view your profile application "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
                   </a>
-                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="not:my_profile/needs_completion">
-                      Click here to view your profile "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
+                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] == 'approved_phase_1'">
+                      Click here to complete or submit your profile application "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
+                  </a>
+                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] == 'published'">
+                      Click here to manage your profile "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
                   </a>
               </li>
               <tal:reviewer tal:condition="python:checkPermission('Review portal content', context)" tal:define="organisations_folder_url hw_view/get_organisations_folder_url">
