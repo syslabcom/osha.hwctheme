@@ -59,7 +59,7 @@
                 </li>
                 <li>
                     <a href="/en/campaign-partners/official-campaign-partners" tal:condition="organisations_folder_url"
-                       tal:attributes="href organisations_folder_url" i18n:translate="">
+                       tal:attributes="href string:${organisations_folder_url}/folder_contents" i18n:translate="">
                         Click here to manage the organisation profiles
                 </a>
                 </li>
