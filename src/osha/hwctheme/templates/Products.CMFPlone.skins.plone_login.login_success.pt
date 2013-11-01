@@ -57,8 +57,8 @@
                 <li>
                     <a href="full_review_list" i18n:translate="">Click here to see items that need reviewing</a>
                 </li>
-                <li>
-                    <a href="/en/campaign-partners/official-campaign-partners" tal:condition="organisations_folder_url"
+                <li tal:condition="organisations_folder_url">
+                    <a href="/en/campaign-partners/official-campaign-partners"
                        tal:attributes="href string:${organisations_folder_url}/folder_contents" i18n:translate="">
                         Click here to manage the organisation profiles
                 </a>
