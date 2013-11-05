@@ -36,7 +36,7 @@
     <div tal:condition="email_from_address">
 
         <div id="descriptionContactForm" i18n:translate="description_contact_site_owner">
-            Fill in this form to contact the site owners.
+            Fill in this form to contact the Healthy Workplaces Campaign team.
         </div>
         <div id="content-core">
             <form name="feedback_form"
@@ -66,9 +66,6 @@
                           i18n:attributes="title title_required;"
                           i18n:translate="label_required">(Required)</span>
 
-                    <div class="formHelp" i18n:translate="help_sender_fullname">
-                        Please enter your full name
-                    </div>
                     <div tal:condition="error"
                        tal:content="error">Validation error output</div>
                     <input type="text"
@@ -96,10 +93,6 @@
                     <span class="fieldRequired" title="Required"
                           i18n:attributes="title title_required;"
                           i18n:translate="label_required">(Required)</span>
-
-                    <div class="formHelp" i18n:translate="help_sender_from_address">
-                        Please enter your e-mail address
-                    </div>
 
                     <div tal:condition="error"
                          tal:content="error">Validation error output</div>
@@ -151,10 +144,6 @@
                     <span class="fieldRequired" title="Required"
                             i18n:attributes="title title_required;"
                             i18n:translate="label_required">(Required)</span>
-
-                    <div class="formHelp" i18n:translate="help_message">
-                        Please enter the message you want to send.
-                    </div>
 
                     <div tal:condition="error"
                          tal:content="error">Validation error output</div>
