@@ -156,6 +156,24 @@
                               > </textarea>
                 </div>
 
+                <div class="field"
+                     tal:define="error errors/recaptcha|nothing"
+                     tal:attributes="class python:test(error, 'field error', 'field')">
+                    
+                    <label for="captcha" i18n:translate="Captcha">
+                        Captcha
+                    </label>
+
+                    <span class="fieldRequired" title="Required"
+                            i18n:attributes="title title_required;"
+                            i18n:translate="label_required">(Required)</span>
+
+                    <div tal:condition="error"
+                         tal:content="error">Validation error output</div>
+
+                    <tal:block tal:replace="structure context/@@captcha/image_tag"/>
+                </div>
+                  
                 <div class="formControls">
 
                     <input class="context"

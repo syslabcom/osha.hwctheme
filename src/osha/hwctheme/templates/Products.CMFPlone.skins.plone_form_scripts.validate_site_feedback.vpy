@@ -5,7 +5,7 @@
 ##bind script=script
 ##bind state=state
 ##bind subpath=traverse_subpath
-##parameters=sender_fullname,subject,message,sender_from_address
+##parameters=sender_fullname,subject,message,sender_from_address,recaptcha_challenge_field,recaptcha_response_field
 ##title=validates the form for sending feedback
 
 from Products.CMFPlone import PloneMessageFactory as _
@@ -35,6 +35,12 @@ if not (subject and subject.strip()):
 
 if not (message and message.strip()):
     state.setError('message', _(u'Please enter a message'), 'message_required')
+
+if not (recaptcha_challenge_field and recaptcha_response_field):
+    state.setError('recaptcha', _(u'Please fill in the captcha'), 'message_required')
+else:
+    if not context.restrictedTraverse('@@captcha').verify():
+        state.setError('recaptcha', _(u'The captcha was incorrectly entered'), 'message_required')
 
 if state.getErrors():
     context.plone_utils.addPortalMessage(
