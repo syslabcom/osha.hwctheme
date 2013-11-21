@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="osha.hwc">
 
 <head>
     <metal:block fill-slot="top_slot"
@@ -42,6 +42,9 @@
 
       <div id="content-core" tal:define="my_profiles hw_view/get_my_profiles">
           <ul>
+              <li tal:condition="python:len(my_profiles)">
+                  <a href="/en/campaign-partners/official-campaign-partners/private-area-ocp" i18n:translate="">Access the private area of the official campaign partners</a>
+              </li>
               <li tal:repeat="my_profile my_profiles">
                   <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] in ['pending', 'pending_phase_2']">
                       Click here to view your profile application "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
@@ -64,26 +67,22 @@
                 </a>
                 </li>
               </tal:reviewer>
+
+
+
+            <li>
+              <a href=""
+                 tal:attributes="href portal_state/navigation_root_url"
+                 i18n:translate="label_login_continue_to_home_page">
+                Continue to the
+                <span tal:content="portal_state/navigation_root_title" i18n:name="portal_title">
+                    portal title
+                </span>
+                home page
+                </a>
+            </li>
+
           </ul>
-
-          <p tal:condition="came_from">
-            <a href=""
-               tal:attributes="href came_from"
-               i18n:translate="label_login_continue">
-              Continue</a>
-          </p>
-
-          <p tal:condition="python:not came_from">
-            <a href=""
-               tal:attributes="href portal_state/navigation_root_url"
-               i18n:translate="label_login_continue_to_home_page">
-              Continue to the
-              <span tal:content="portal_state/navigation_root_title" i18n:name="portal_title">
-                  portal title
-              </span>
-              home page
-              </a>
-          </p>
 
           <div tal:condition="not:js_enabled">
              <p i18n:translate="description_enable_cookies_to_stay_logged_in">
