@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <html xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      i18n:domain="osha.hwc">
+      i18n:domain="osha.hwc"
+      tal:define="lang context/@@plone_portal_state/language">
     <div id="logo-container"
-         tal:define="lang context/@@plone_portal_state/language;
-           portal_url context/@@plone_portal_state/portal_url">
+         tal:define="portal_url context/@@plone_portal_state/portal_url">
       <a id="portal-logo" class="brand" href="/">
         <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"
              tal:attributes="src string:${portal_url}/++theme++osha.hwctheme/HWManageStress_files/images/logo_en.png"/>
@@ -23,4 +23,7 @@
       </div>
     </div>
     <div id="select_language" i18n:translate="label_select_language">Select your language</div>
+    <div id="back_to_osha">
+      <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa/eu/${lang}"><span i18n:translate="supported_by">Supported by</span>: <span i18n:translate="">European Agency for Safety and Health at Work</span></a>
+    </div>
 </html>
