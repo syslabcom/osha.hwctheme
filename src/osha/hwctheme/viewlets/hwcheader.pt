@@ -3,7 +3,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="osha.hwc"
       tal:define="lang context/@@plone_portal_state/language">
-
+  <span style="display:none;">
     <div id="logo-container"
          tal:define="portal_url context/@@plone_portal_state/portal_url">
       <a id="portal-logo" class="brand" href="/">
@@ -28,4 +28,5 @@
     </p>
 
     <p class="tagline1" id="tagline1" i18n:translate="campaign_tagline">Safety and health at work is everyone's concern. It's good for you. It's good for business.</p>
+  </span>
 </html>
