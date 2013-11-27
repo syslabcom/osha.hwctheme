@@ -3,6 +3,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="osha.hwc"
       tal:define="lang context/@@plone_portal_state/language">
+
     <div id="logo-container"
          tal:define="portal_url context/@@plone_portal_state/portal_url">
       <a id="portal-logo" class="brand" href="/">
@@ -17,13 +18,14 @@
         </a>
       </div>
 
-      <div id="tagline" class="offset2">
-        <p i18n:translate="campaign_slogan">Healthy Workplaces Manage Stress.</p>
-        <p class="tagline1" i18n:translate="campaign_tagline">Safety and health at work is everyone's concern. It's good for you. It's good for business.</p>
-      </div>
+      <div id="tagline" i18n:translate="campaign_slogan">Healthy Workplaces Manage Stress.</div>
     </div>
+
     <div id="select_language" i18n:translate="label_select_language">Select your language</div>
-    <div id="back_to_osha">
-      <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa/eu/${lang}"><span i18n:translate="supported_by">Supported by</span>: <span i18n:translate="">European Agency for Safety and Health at Work</span></a>
-    </div>
+
+    <p id="back_to_osha">
+      <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa.eu/${lang}" target="_blank"><span i18n:translate="supported_by">Supported by</span>: <span i18n:translate="">European Agency for Safety and Health at Work</span></a>
+    </p>
+
+    <p class="tagline1" id="tagline1" i18n:translate="campaign_tagline">Safety and health at work is everyone's concern. It's good for you. It's good for business.</p>
 </html>
