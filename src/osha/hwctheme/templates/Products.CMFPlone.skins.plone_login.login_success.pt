@@ -70,7 +70,7 @@
 
 
 
-            <li>
+<!--             <li>
               <a href=""
                  tal:attributes="href portal_state/navigation_root_url"
                  i18n:translate="label_login_continue_to_home_page">
@@ -80,7 +80,7 @@
                 </span>
                 home page
                 </a>
-            </li>
+            </li> -->
 
           </ul>
 
