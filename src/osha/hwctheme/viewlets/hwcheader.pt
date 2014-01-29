@@ -5,14 +5,15 @@
       tal:define="lang context/@@plone_portal_state/language">
   <span style="display:none;">
     <div id="logo-container"
-         tal:define="portal_url context/@@plone_portal_state/portal_url">
-      <a id="portal-logo" class="brand" href="/">
+         tal:define="portal_url context/@@plone_portal_state/portal_url;
+         navigation_root_url context/@@plone_portal_state/navigation_root_url">
+      <a id="portal-logo" class="brand" href="/" tal:attributes="href navigation_root_url">
         <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logo.png"
              tal:attributes="src string:${portal_url}/++theme++osha.hwctheme/HWManageStress_files/images/logo_${lang}.png"/>
       </a>
 
       <div id="osha-logo">
-        <a href="http://osha.europa.eu" target="_blank">
+        <a href="http://osha.europa.eu" target="_blank" tal:attributes="href string:https://osha.europa.eu/${lang}">
           <img title="" alt="" src="/++theme++osha.hwctheme/HWManageStress_files/images/logoosha.png"
                tal:attributes="src string:${portal_url}/++theme++osha.hwctheme/HWManageStress_files/images/logoosha_${lang}.png"/>
         </a>
