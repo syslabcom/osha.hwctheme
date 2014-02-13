@@ -25,7 +25,7 @@
     <div id="select_language" i18n:translate="label_select_language">Select your language</div>
 
     <p id="back_to_osha">
-      <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa.eu/${lang}" target="_blank"><span i18n:translate="supported_by">Supported by</span>: <span i18n:translate="">European Agency for Safety and Health at Work</span></a>
+      <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa.eu/${lang}" target="_blank"><span i18n:translate="">European Agency for Safety and Health at Work</span></a>
     </p>
 
     <p class="tagline1" id="tagline1" i18n:translate="campaign_tagline">Safety and health at work is everyone's concern. It's good for you. It's good for business.</p>
