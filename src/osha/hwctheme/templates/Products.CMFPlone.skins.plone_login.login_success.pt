@@ -53,7 +53,7 @@
                   <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] == 'approved_phase_1'">
                       Click here to complete or submit your profile application "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
                   </a>
-                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] == 'published'">
+                  <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] == 'published' or my_profile['portal_type']=='osha.hwccontent.focalpoint'">
                       Click here to manage your profile "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
                   </a>
               </li>
