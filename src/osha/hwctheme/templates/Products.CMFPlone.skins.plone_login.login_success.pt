@@ -44,7 +44,7 @@
           <ul>
               <li tal:condition="python:len(my_profiles)">
                   <a tal:condition="python:my_profiles[0]['portal_type']=='osha.hwccontent.organisation'" href="/en/campaign-partners/official-campaign-partners/private-area-ocp" i18n:translate="">Access the private area of the official campaign partners</a>
-                  <a tal:condition="python:my_profiles[0]['portal_type']=='osha.hwccontent.focalpoint'" href="/en/campaign-partners/focal-points/private-area-fops" i18n:translate="">Access the private area of the official Focal Points</a>
+                  <a tal:condition="python:my_profiles[0]['portal_type']=='osha.hwccontent.focalpoint'" href="/en/campaign-partners/national-focal-points/private-area-fops" i18n:translate="">Access the private area of the official Focal Points</a>
               </li>
               <li tal:repeat="my_profile my_profiles">
                   <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] in ['pending', 'pending_phase_2']">
