@@ -3,7 +3,8 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="osha.hwc"
       tal:define="lang context/@@plone_portal_state/language">
-  <span style="display:none;">
+  <span style="display:none;"
+    tal:define="hw_view context/@@hw_view">
     <div id="logo-container"
          tal:define="portal_url context/@@plone_portal_state/portal_url;
          navigation_root_url context/@@plone_portal_state/navigation_root_url">
@@ -22,7 +23,7 @@
       <div id="tagline" i18n:translate="campaign_slogan">Healthy Workplaces Manage Stress.</div>
     </div>
 
-    <div id="select_language" i18n:translate="label_select_language">Select your language</div>
+    <div tal:condition="hw_view/get_len_translations" id="select_language"><tal:label i18n:translate="label_select_language">Select your language</tal:label>:</div>
 
     <p id="back_to_osha">
       <a href="http://osha.europa.eu" tal:attributes="href string:https://osha.europa.eu/${lang}" target="_blank"><span i18n:translate="">European Agency for Safety and Health at Work</span></a>
