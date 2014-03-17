@@ -167,6 +167,39 @@
             </ul>
         </tal:albumsimages>
 
+        <tal:albumsimages tal:condition="albums" tal:repeat="row python:range((len(albums)+2)/3)">
+            <ul tal:condition="python:albums and len(albums)>=row*3+1" class="thumbnails">
+                <tal:albums tal:repeat="album albums">
+
+                    <li class="photoAlbumEntry span4"
+                         tal:define="image_brains_in_album python:view.getAlbumContent(subimages=1, container=album)['subimages'];
+                                     number_of_images python:len(image_brains_in_album);
+                                     random python:modules['random'];
+                                     random_image python:number_of_images and random.choice(image_brains_in_album).getObject() or None">
+                        <div class="thumbnail">
+                                <a tal:attributes="href album/getURL;
+                                                   title album/Description">
+                                    <tal:block condition="number_of_images">
+                                        <img src="" alt=""
+                                             tal:define="scale random_image/@@images;
+                                                         img_tag python:scale.scale('image', scale='preview').tag()"
+                                             tal:replace="structure img_tag" />
+                                    </tal:block>
+                                </a>
+                                <h3><a tal:attributes="href album/getURL" tal:content="album/pretty_title_or_id">Album Title</a>
+                                (<tal:number content="number_of_images" />)</h3>
+                                <p tal:content="album/Description">
+                                   Description
+                                </p>
+
+
+                        </div>
+                    </li>
+
+                </tal:albums>
+            </ul>
+        </tal:albumsimages>
+
     </div>
 
 
