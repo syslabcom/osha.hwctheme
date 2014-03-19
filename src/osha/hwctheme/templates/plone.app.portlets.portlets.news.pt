@@ -21,8 +21,7 @@
                     tal:repeat="obj view/published_news_items">
     <dd tal:define="oddrow repeat/obj/odd;
                     news_item obj/getObject;
-                    text news_item/@@text-transform/text/text/plain;
-                    text_len python:len(text);"
+                    text news_item/text"
          tal:attributes="class python:oddrow and 'portletItem even' or 'portletItem odd'">
 
         <h3><a href=""
@@ -37,8 +36,13 @@
              tal:replace="structure python: scales.tag('image', width=130, height=130, css_class='pull-left')" />
         <p class="portletItemDetails data"
               tal:content="python:toLocalizedTime(obj.Date)">May 5</p>
-        <p tal:content="text" tal:condition="python:text_len < 200"/>
-        <p tal:content="python:text[:200].rsplit(' ', 1)[0].rstrip('.') + '...'" tal:condition="python:text_len >= 200"/>
+        <span tal:omit-tag="" tal:condition="python:text is not None">
+          <span tal:omit-tag="" tal:define="text news_item/@@text-transform/text/text/plain;
+                    text_len python:len(text)">
+          <p tal:content="text" tal:condition="python:text_len < 200"/>
+          <p tal:content="python:text[:200].rsplit(' ', 1)[0].rstrip('.') + '...'" tal:condition="python:text_len >= 200"/>
+          </span>
+        </span>
 
     </dd>
     </tal:newsitems>
