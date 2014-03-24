@@ -48,7 +48,7 @@
 
     <!-- add ga tracking code -->
     <after css:theme="#footer" css:content="#gacode" />
-    
+
 
     <!-- Breadcrumbs -->
     <drop css:content="span#breadcrumbs-you-are-here" />
@@ -99,11 +99,14 @@
     <!-- Content navigation -->
     <replace css:theme="ul#contentnav" css:content="dl.portletNavigationTree ul"/>
 
-    <!-- Frontpage banner -->
-    <replace  css:if-content="body.template-hw2014_front_page" css:theme-children="div#banner" css:content-children="div#banner"/>
-
-    <!-- Frontpage news-events -->
-    <replace  css:if-content="body.template-hw2014_front_page" css:theme-children="div.news-events" css:content="div.news-events"/>
+    <rules css:if-content="body.template-hw2014_front_page">
+        <!-- Frontpage banner -->
+        <replace css:theme-children="div#banner" css:content-children="div#banner" />
+        <!-- Frontpage hashtag -->
+        <replace css:theme-children="div#twitterlink" css:content-children="div#twitterlink" />
+        <!-- Frontpage news-events -->
+        <replace css:theme-children="div.news-events" css:content="div.news-events" />
+    </rules>
 
     <!-- Frontpage partner logos -->
     <replace css:theme-children="div#frontpage-partners" css:content-children="div#frontpage-partners" />

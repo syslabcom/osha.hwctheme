@@ -1463,3 +1463,10 @@ select.datetime-widget {
 #login-form .field #__ac_password {
     width: 375px;
 }
+
+
+/* Last minute addition to the home page: twitter promo link (Ticket #9695) */
+
+div#twitterlink {
+    text-align: center;
+}
