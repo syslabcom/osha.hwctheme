@@ -5,11 +5,11 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="osha.hwctheme">
 
-<!--   <plone:static
+  <plone:static
     name="osha.hwctheme"
     directory="theme"
     type="theme"
-    /> -->
+    />
 
   <genericsetup:registerProfile
     name="default"

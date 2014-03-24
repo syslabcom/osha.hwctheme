@@ -1,0 +1,160 @@
+<rules xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <theme href="HWManageStress2.htm" css:if-content="body.template-hw2014_front_page"/>
+    <theme href="HWManageStressContent.htm" css:if-content="body.section-intro"/>
+    <rules css:if-content="body.template-edit">
+        <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-organisation" />
+        <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-focalpoint" />
+        <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-mediapartner" />
+    </rules>
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-organisation" />
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-mediapartner" />
+    <rules css:if-not-content="body.template-edit">
+        <theme href="HWManageStressSubContentPartners.htm" css:if-content="body.portaltype-osha-hwccontent-organisation" />
+        <theme href="HWManageStressSubContentFocalPoints.htm" css:if-content="body.portaltype-osha-hwccontent-focalpoint" />
+        <theme href="HWManageStressSubContentFocalPoints.htm" css:if-content="body.portaltype-osha-hwccontent-mediapartner" />
+    </rules>
+    <theme href="HWManageStressSubContent2images.htm" css:if-content="body.two-images" />
+    <theme href="HWManageStressSubContentPhotoGalery.htm" css:if-content="body.template-atct_album_view" />
+    <theme href="HWManageStressContentPartners.htm" css:if-content="body.template-document_organisations_view" />
+    <theme href="HWManageStressContentFocalPoints.htm" css:if-content="body.template-document_focalpoints_view" />
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.full-width" />
+    <theme href="HWManageStressSubContentMaterial.htm" css:if-content="body.materials-view" />
+    <theme href="HWManageStressSubContent.htm" css:if-content="body.subsection" />
+
+    <!-- default is full width -->
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="div#visual-portal-wrapper" />
+
+    <!-- copy over body classes -->
+    <copy attributes="class" css:content="body" css:theme="body" />
+
+
+    <!-- head stuff -->
+    <replace theme="/html/head/meta[@name='description']" content="/html/head/meta[@name='description']"/>
+    <replace theme="/html/head/base" content="/html/head/base"/>
+    <replace theme="/html/head/title" content="/html/head/title"/>
+    <replace css:theme="#logo-container" css:content="#logo-container"/>
+    <after theme-children="/html/head" css:content="link[rel='home']"/>
+
+    <!-- allow basic editing -->
+    <before theme-children="/html/head" content="/html/head/script" />
+    <before theme-children="/html/head">
+        <link rel="stylesheet" type="text/css" href="authoring.css"/>
+        <link rel="stylesheet" type="text/css" href="forms.css"/>
+        <link rel="stylesheet" type="text/css" href="++resource++plone.formwidget.contenttree/contenttree.css"/>
+    </before>
+
+    <!-- add ga tracking code -->
+    <after css:theme="#footer" css:content="#gacode" />
+    
+
+    <!-- Breadcrumbs -->
+    <drop css:content="span#breadcrumbs-you-are-here" />
+    <replace css:content="span.breadcrumbSeparator">::</replace>
+    <replace css:theme-children="div#beadcrumb" css:content-children="div#portal-breadcrumbs" />
+
+    <!-- Language selector -->
+    <replace css:theme-children="div#language ul.dropdown-menu" css:content-children="ul#portal-languageselector" />
+    <replace css:theme-children="div#language a.dropdown-toggle" css:content-children="ul#portal-languageselector li.currentLanguage a" />
+    <replace css:theme-children="div#language #select_language" css:content-children="div#select_language" />
+
+    <!-- Search form -->
+    <drop css:content="form.searchPage .actionMenu"/>
+    <copy css:theme="form.form-search" css:content="div#portal-searchbox form" attributes="action"/>
+
+    <!-- Navigation tabs -->
+    <replace css:theme="ul#portal-globalnav" css:content="ul#portal-globalnav"/>
+
+    <!-- Footer actions -->
+    <replace css:theme-children="div#footer ul#footer_actions" css:content-children="ul#portal-siteactions"/>
+    <replace css:theme-children="p#tagline1" css:content-children="p#tagline1" />
+    <replace css:theme-children="p#back_to_osha" css:content-children="p#back_to_osha" />
+
+    <!-- Portal messages -->
+    <before css:if-content="body.template-get-campaign-certificate" css:theme-children="#contentext" css:content="dl.portalMessage"/>
+    <before css:if-content="body.template-document_organisations_view" css:theme-children="#content" css:content="dl.portalMessage"/>
+
+    <!-- Content title -->
+    <!-- Content type-->
+    <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>
+    <!-- SubContent type-->
+    <replace css:theme="div#content h1" css:content="h1.documentFirstHeading"/>
+
+    <!-- Main Content -->
+    <!-- Description et al -->
+    <replace css:theme-children="div#introtext" css:content=".documentDescription"/>
+    <replace css:theme-children="div#intronavigation" css:content=".documentDescription"/>
+    <replace css:theme-children="div#contentext" css:content=".documentDescription"/>
+
+    <!-- Content type -->
+    <after css:theme-children="div#introtext" css:content-children="div#introtext"/>
+    <after css:theme-children="div#intronavigation" css:content-children="div#intronavigation"/>
+    <!-- Contact Form -->
+    <after css:theme-children="div#contentext" css:content="div#descriptionContactForm"/>
+    <!-- SubContent type -->
+    <after css:theme-children="div#contentext" css:content-children="div#content-core"/>
+
+    <!-- Content navigation -->
+    <replace css:theme="ul#contentnav" css:content="dl.portletNavigationTree ul"/>
+
+    <!-- Frontpage banner -->
+    <replace  css:if-content="body.template-hw2014_front_page" css:theme-children="div#banner" css:content-children="div#banner"/>
+
+    <!-- Frontpage news-events -->
+    <replace  css:if-content="body.template-hw2014_front_page" css:theme-children="div.news-events" css:content="div.news-events"/>
+
+    <!-- Frontpage partner logos -->
+    <replace css:theme-children="div#frontpage-partners" css:content-children="div#frontpage-partners" />
+
+    <!-- Related sites -->
+    <replace css:theme-children="div#relatedSites" css:content-children="div#relatedSites" />
+
+    <!-- See also -->
+    <replace css:theme-children="div#seeAlso" css:content-children="div#seeAlso" />
+
+    <!-- Section intro image -->
+    <replace css:theme-children="div#intro-image" css:content-children="div#intro-image" />
+    <!-- drop description, will only be shown in HTML header -->
+    <drop css:content="body.section-intro div.documentDescription" />
+    <drop css:content="body.subsection div.documentDescription" />
+    <drop css:content="body.template-document_focalpoints_view div.documentDescription" />
+    <drop css:content="body.template-document_organisations_view div.documentDescription" />
+    <drop css:content="body.full-width div.documentDescription" />
+
+    <!-- SubSection image -->
+    <replace css:theme-children="div#content-image" css:content-children="div#sectionImage" />
+    <replace css:theme-children="div#content-image-1" css:content-children="div#sectionImage-1" />
+    <replace css:theme-children="div#content-image-2" css:content-children="div#sectionImage-2" />
+
+    <!-- Focal point listing -->
+    <replace css:theme-children="div#frontpage-focalpoints" css:content-children="div#frontpage-focalpoints" />
+
+    <!-- Organisation management viewlet -->
+    <before css:theme-children="div#content" css:content="div#manage_organisation" />
+
+    <!-- materials view -->
+    <replace css:theme-children="div#material" css:content-children="div#material" />
+
+    <!-- plone.app.toolbar -->
+<!--
+    <before theme-children="/html/body" content="//div[@data-iframe='plone-toolbar']" />
+    <before theme-children="/html/head">
+        <link rel="stylesheet" type="text/css" href="++resource++plone.app.widgets.css"/>
+        <link rel="stylesheet" type="text/css" href="++resource++plone.app.toolbar_init.css"/>
+        <link rel="stylesheet" type="text/css" href="++resource++plone.app.toolbar.css"/>
+        <script type="text/javascript" src="++resource++plone.app.jquery.js"></script>
+        <script type="text/javascript" src="++resource++plone.app.toolbar_init.js"></script>
+        <script type="text/javascript" src="++resource++plone.app.toolbar.js"></script>
+        <script type="text/javascript" src="++resource++plone.app.widgets.js"></script>
+    </before>
+-->
+
+    <!-- Photo Gallery images -->
+    <drop css:theme="ul.thumbnails:last-child" />
+    <replace css:theme="ul.thumbnails" css:content="ul.thumbnails" />
+    <!-- Photo Gallery batch navigation -->
+    <replace css:theme="div.pagination" css:content="div.pagination" />
+
+</rules>
