@@ -304,17 +304,23 @@ h1{
 body.site-bg .banner-text1 p {
     font-size: 118%;
 }
+body.site-cs .banner-text1 p {
+    font-size: 130%;
+}
+body.site-cs #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
+    font-size: 85%;
+}
 body.site-de .banner-text1 p {
     font-size: 129%;
 }
 body.site-el .banner-text1 p {
-    font-size: 112%;
+    font-size: 110%;
 }
 body.site-el #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
 }
 body.site-et .banner-text1 p {
-    font-size: 129%;
+    font-size: 122%;
 }
 body.site-et #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
@@ -323,7 +329,7 @@ body.site-es .banner-text1 p {
     font-size: 127%;
 }
 body.site-fr .banner-text1 p {
-    font-size: 134%;
+    font-size: 128%;
 }
 body.site-fi .banner-text1 p {
     font-size: 128%;
@@ -338,7 +344,7 @@ body.site-hu #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
 }
 body.site-hr .banner-text1 p {
-    font-size: 132%;
+    font-size: 128%;
 }
 body.site-hr #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
@@ -359,7 +365,7 @@ body.site-lt #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
 }
 body.site-mt .banner-text1 p {
-    font-size: 126%;
+    font-size: 122%;
 }
 body.site-nl .banner-text1 p {
     font-size: 128%;
@@ -370,23 +376,29 @@ body.site-nl #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
 body.site-no .banner-text1 p {
     font-size: 128%;
 }
+body.site-no #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
+    font-size: 85%;
+}
 body.site-pl .banner-text1 p {
-    font-size: 116%;
+    font-size: 110%;
 }
 body.site-pt .banner-text1 p {
-    font-size: 130%;
+    font-size: 128%;
 }
 body.site-ro .banner-text1 p {
     font-size: 110%;
 }
+body.site-sk #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
+    font-size: 85%;
+}
 body.site-sl .banner-text1 p {
-    font-size: 132%;
+    font-size: 130%;
 }
 body.site-sl #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
 }
 body.site-sv .banner-text1 p {
-    font-size: 138%;
+    font-size: 132%;
 }
 
 .banner-text h2{
