@@ -56,14 +56,22 @@
                       Click here to manage your profile "<tal:profile_name tal:replace="my_profile/Title" i18n:name="profile_name">Profile</tal:profile_name>"
                   </a>
               </li>
-              <tal:reviewer tal:condition="python:checkPermission('Review portal content', context)" tal:define="organisations_folder_url hw_view/get_organisations_folder_url">
+              <tal:reviewer tal:condition="python:checkPermission('Review portal content', context)"
+                  tal:define="organisations_folder_url hw_view/get_organisations_folder_url;
+                  mediapartners_folder_url hw_view/get_mediapartners_folder_url;">
                 <li>
                     <a href="full_review_list" i18n:translate="">Click here to see items that need reviewing</a>
                 </li>
                 <li tal:condition="organisations_folder_url">
                     <a href="/en/campaign-partners/official-campaign-partners"
                        tal:attributes="href string:${organisations_folder_url}/folder_contents" i18n:translate="">
-                        Click here to manage the organisation profiles
+                        Click here to manage the organisation profiles (OCPs)
+                </a>
+                </li>
+                <li tal:condition="mediapartners_folder_url">
+                    <a href="/en/campaign-partners/media-partners"
+                       tal:attributes="href string:${mediapartners_folder_url}/folder_contents" i18n:translate="">
+                        Click here to manage the media partner profiles
                 </a>
                 </li>
               </tal:reviewer>
