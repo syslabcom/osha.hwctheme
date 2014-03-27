@@ -19,6 +19,8 @@
     provides="Products.GenericSetup.interfaces.EXTENSION"
     />
 
+  <include package=".browser" />
+
   <include package="z3c.jbot" file="meta.zcml" />
 
   <browser:jbot
