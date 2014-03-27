@@ -1522,3 +1522,10 @@ select.datetime-widget {
 div#twitterlink {
     text-align: center;
 }
+
+div.news > div > a {
+  display:block;
+  width:100px;
+  height: 145px;
+  float:left;
+}
