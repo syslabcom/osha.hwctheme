@@ -358,6 +358,9 @@ body.site-is #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
 body.site-it .banner-text1 p {
     font-size: 130%;
 }
+body.site-it #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
+    font-size: 85%;
+}
 body.site-lt .banner-text1 p {
     font-size: 128%;
 }
@@ -1522,7 +1525,6 @@ select.datetime-widget {
 div#twitterlink {
     text-align: center;
 }
-
 div.news > div > a {
   display:block;
   width:140px;
