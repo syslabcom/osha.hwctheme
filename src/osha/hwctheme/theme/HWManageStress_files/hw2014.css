@@ -431,6 +431,11 @@ body.site-sv .banner-text1 p {
 	margin:0;
 	}
 
+.focalpoints h2 .discreet, .partners h2 .discreet {
+    text-transform: none;
+    color: #000000;
+}
+
 .news-events .item {
 	background:#f2f7d8;
 	padding: 15px;
