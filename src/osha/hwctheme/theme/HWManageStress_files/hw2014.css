@@ -1079,6 +1079,9 @@ color: #B1B3B4;
 	margin: 0 auto 10px;
 }
 
+.country.mediapartner img {
+    border-radius: 0;
+}
 
 .flagsup{
 	position: absolute;
