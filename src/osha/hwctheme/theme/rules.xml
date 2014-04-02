@@ -8,7 +8,11 @@
         <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-organisation" />
         <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-focalpoint" />
         <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-osha-hwccontent-mediapartner" />
+        <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-news-item" />
+        <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-event" />
     </rules>
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-news-item" />
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-event" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-organisation" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-mediapartner" />
     <rules css:if-not-content="body.template-edit">

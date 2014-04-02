@@ -1545,3 +1545,12 @@ div.news > div > a {
 div#content div#formfield-form-widgets-IVersionable-changeNote{
     display: none;
 }
+
+/* OSHA request #9755 */
+
+body.template-news-item #content ul.formTabs,
+body.template-event #content ul.formTabs,
+body.template-edit.portaltype-news-item #content ul.formTabs,
+body.template-edit.portaltype-event #content ul.formTabs {
+    display: none;
+}
