@@ -43,7 +43,7 @@
       <div id="content-core" tal:define="my_profiles hw_view/get_my_profiles">
           <ul>
               <li tal:condition="python:len(my_profiles)">
-                  <a href="/en/campaign-partners/private-area-partners/welcome-in-the-private-area-for-partners-of-the-healthy-workplaces-campaign" i18n:translate="">Access the private area of the official campaign partners</a>
+                  <a href="/en/campaign-partners/private-area-partners/welcome-in-the-private-area-for-partners-of-the-healthy-workplaces-campaign" i18n:translate="">Access the private area for partners</a>
               </li>
               <li tal:repeat="my_profile my_profiles">
                   <a href="#" tal:attributes="href my_profile/url" i18n:translate="" tal:condition="python:my_profile['review_state'] in ['pending', 'pending_phase_2']">
