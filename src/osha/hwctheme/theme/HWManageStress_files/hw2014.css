@@ -1539,3 +1539,9 @@ div.news > div > a {
   height: 145px;
   float:left;
 }
+
+/* OSHA madness #9751 */
+
+div#content div#formfield-form-widgets-IVersionable-changeNote{
+    display: none;
+}
