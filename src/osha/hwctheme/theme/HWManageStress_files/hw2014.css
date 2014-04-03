@@ -319,6 +319,17 @@ body.site-el .banner-text1 p {
 body.site-el #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
     font-size: 85%;
 }
+/* Don't capitalize most of the Greek texts */
+body.site-el #more-content h2,
+body.site-el #menu,
+body.site-el #content .material-item,
+body.site-el .news-events h2,
+body.site-el .partners h2,
+body.site-el#content h1,
+body.site-el .focalpoints h2,
+body.site-el .partners-menu .nav-tabs > li {
+    text-transform: none;
+}
 body.site-et .banner-text1 p {
     font-size: 122%;
 }
