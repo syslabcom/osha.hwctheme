@@ -323,9 +323,10 @@ body.site-el #portaltab-stress-and-psychosocial-risks a.dropdown-toggle{
 body.site-el #more-content h2,
 body.site-el #menu,
 body.site-el #content .material-item,
+body.site-el #content .material-item h2,
 body.site-el .news-events h2,
 body.site-el .partners h2,
-body.site-el#content h1,
+body.site-el #content h1,
 body.site-el .focalpoints h2,
 body.site-el .partners-menu .nav-tabs > li {
     text-transform: none;
