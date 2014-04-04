@@ -328,6 +328,7 @@ body.site-el .news-events h2,
 body.site-el .partners h2,
 body.site-el #content h1,
 body.site-el .focalpoints h2,
+body.site-el .databox,
 body.site-el .partners-menu .nav-tabs > li {
     text-transform: none;
 }
