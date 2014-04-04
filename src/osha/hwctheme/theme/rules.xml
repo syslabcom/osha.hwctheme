@@ -45,11 +45,12 @@
 
     <!-- allow basic editing -->
     <before theme-children="/html/head" content="/html/head/script" />
-    <before theme-children="/html/head">
+    <!-- we now use the manually compiled plone.css directly from the theme -->
+<!--     <before theme-children="/html/head">
         <link rel="stylesheet" type="text/css" href="authoring.css"/>
         <link rel="stylesheet" type="text/css" href="forms.css"/>
         <link rel="stylesheet" type="text/css" href="++resource++plone.formwidget.contenttree/contenttree.css"/>
-    </before>
+    </before> -->
 
     <!-- add ga tracking code -->
     <after css:theme="#footer" css:content="#gacode" />
