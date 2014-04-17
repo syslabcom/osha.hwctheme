@@ -1079,6 +1079,10 @@ color: #B1B3B4;
 	padding-right: 10px;
 }
 
+.focalpoints-logos .logos {
+    min-height: 120px;
+}
+
 .country, .mediapartner{
 	float: left;
 	text-align: center;
