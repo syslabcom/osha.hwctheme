@@ -1079,7 +1079,7 @@ color: #B1B3B4;
 	padding-right: 10px;
 }
 
-.country{
+.country, .mediapartner{
 	float: left;
 	text-align: center;
 }
@@ -1090,10 +1090,6 @@ color: #B1B3B4;
 	border-radius: 300px;
 	display: block;
 	margin: 0 auto 10px;
-}
-
-.country.mediapartner img {
-    border-radius: 0;
 }
 
 .flagsup{
