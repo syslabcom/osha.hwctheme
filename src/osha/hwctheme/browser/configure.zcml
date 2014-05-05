@@ -7,7 +7,7 @@
       for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
       name="last-login"
       class=".last_login.LastLoginView"
-      permission="zope2.View"
+      permission="cmf.ManagePortal"
       />
 
 </configure>
