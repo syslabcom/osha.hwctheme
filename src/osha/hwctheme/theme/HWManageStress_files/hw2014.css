@@ -1567,3 +1567,13 @@ body.template-edit.portaltype-news-item #content ul.formTabs,
 body.template-edit.portaltype-event #content ul.formTabs {
     display: none;
 }
+
+/* Workflow state colours */
+
+.summary .state-private {
+    color: #FF0000;
+}
+
+.summary .state-pending {
+    color: #FFA500;
+}
