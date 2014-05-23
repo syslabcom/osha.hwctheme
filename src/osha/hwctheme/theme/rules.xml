@@ -25,6 +25,7 @@
     <theme href="HWManageStressContentPartners.htm" css:if-content="body.template-document_organisations_view" />
     <theme href="HWManageStressContentFocalPoints.htm" css:if-content="body.template-document_focalpoints_view" />
     <theme href="HWManageStressContentFocalPoints.htm" css:if-content="body.template-document_mediapartners_view" />
+    <theme href="HWManageStressContentFocalPoints.htm" css:if-content="body.template-document_organisations_atoz_view" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.full-width" />
     <theme href="HWManageStressSubContentMaterial.htm" css:if-content="body.materials-view" />
     <theme href="HWManageStressSubContent.htm" css:if-content="body.subsection" />
