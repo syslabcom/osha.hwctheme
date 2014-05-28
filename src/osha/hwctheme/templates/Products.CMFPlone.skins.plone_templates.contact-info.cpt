@@ -185,7 +185,7 @@ var RecaptchaState = {
     is_incorrect : false,
     programming_error : '',
     error_message : '',
-    server : 'http://www.google.com/recaptcha/api/',
+    server : 'https://www.google.com/recaptcha/api/',
     lang : 'en',
     timeout : 1800
 };
