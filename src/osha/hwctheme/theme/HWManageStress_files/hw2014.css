@@ -607,6 +607,18 @@ body.site-sv .banner-text1 p {
 	margin-top: 0 !important;
 }
 
+#content .atoz {
+    font-weight: bold;
+    font-size: 120%;
+    line-height: 120%;
+    background: url(../HWManageStress_files/images/introicon.gif) no-repeat left 8px transparent;
+    padding-left: 22px;
+    margin-bottom: 1em;
+
+}
+body.template-document_organisations_atoz_view #introtext {
+    display: none;
+}
 	/******footer*******/
 
 
