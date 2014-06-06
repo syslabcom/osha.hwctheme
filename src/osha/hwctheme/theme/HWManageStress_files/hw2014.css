@@ -1589,3 +1589,7 @@ body.template-edit.portaltype-event #content ul.formTabs {
 .summary .state-pending {
     color: #FFA500;
 }
+
+#content #formfield-form-widgets-IEventRecurrence-recurrence {
+    display: none;
+}
