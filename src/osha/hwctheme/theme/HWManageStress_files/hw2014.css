@@ -614,7 +614,7 @@ body.site-sv .banner-text1 p {
     background: url(../HWManageStress_files/images/introicon.gif) no-repeat left 8px transparent;
     padding-left: 22px;
     margin-bottom: 1em;
-
+    margin-top: 1.5em;
 }
 body.template-document_organisations_atoz_view #introtext {
     display: none;
