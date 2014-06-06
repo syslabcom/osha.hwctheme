@@ -1398,14 +1398,17 @@ dl.error > dt,
 
 /*** Copied styles from Plone for general display ***/
 
-#content img.tileImage, #content div.newsImageContainer {
+#content div.tileImage, #content div.newsImageContainer {
     float: right;
     margin: 0 1em;
-    max-width: 360px;
+}
+#content img.tileImage, #content div.tileImage, #content div.newsImageContainer {
+    max-width: 420px;
     max-height: 380px;
 }
 
-#content div.newsImageContainer p.discreet {
+#content div.newsImageContainer p.discreet,
+#content div.tileImage p.discreet {
     background-color: rgba(40, 40, 40, 0.7);
     color: #FFFFFF;
     font-weight: bold;
@@ -1413,7 +1416,7 @@ dl.error > dt,
     padding: 0.5em;
     position: relative;
     top: -1.5em;
-    max-width: 185px;
+    max-width: 420px;
     font-size: 80%;
 }
 
