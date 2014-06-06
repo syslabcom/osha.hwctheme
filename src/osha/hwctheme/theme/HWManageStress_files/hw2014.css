@@ -1401,8 +1401,8 @@ dl.error > dt,
 #content img.tileImage, #content div.newsImageContainer {
     float: right;
     margin: 0 1em;
-    max-width: 120px;
-    max-height: 125px;
+    max-width: 360px;
+    max-height: 380px;
 }
 
 #content div.newsImageContainer p.discreet {
