@@ -295,6 +295,10 @@
 .mediapartner {
   margin-top: 1em;
 }
+#content img.tileImage, #content div.tileImage, #content div.newsImageContainer {
+    max-width: 260px;
+    max-height: 360px;
+}
 
 /************events*********************************/
 
