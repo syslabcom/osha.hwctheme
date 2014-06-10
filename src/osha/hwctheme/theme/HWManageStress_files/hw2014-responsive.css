@@ -292,8 +292,11 @@
     padding: 5px;
 }
 
-.mediapartner {
-  margin-top: 1em;
+div.logos > div.mediapartner:first-child {
+  margin-top: 0
+}
+div.logos > div.mediapartner {
+  margin-top: 3em;
 }
 #content img.tileImage, #content div.tileImage, #content div.newsImageContainer {
     max-width: 260px;
