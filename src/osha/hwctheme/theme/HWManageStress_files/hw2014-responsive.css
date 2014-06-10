@@ -184,7 +184,7 @@
 
 
 
-#language .dropdown-menu{   
+#language .dropdown-menu{
     right: 10px;
     left: auto;
 }
@@ -290,6 +290,10 @@
 
 .partners-menu img {
     padding: 5px;
+}
+
+.mediapartner {
+  margin-top: 1em;
 }
 
 /************events*********************************/
