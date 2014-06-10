@@ -1403,8 +1403,8 @@ dl.error > dt,
     margin: 0 1em;
 }
 #content img.tileImage, #content div.tileImage, #content div.newsImageContainer {
-    max-width: 460px;
-    max-height: 380px;
+    max-width: 420px;
+    max-height: 460px;
 }
 
 #content div.newsImageContainer p.discreet,
