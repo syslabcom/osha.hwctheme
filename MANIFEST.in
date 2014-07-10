@@ -4,3 +4,18 @@ recursive-include src *.pt
 recursive-include src *.xml
 recursive-include src *.zcml
 recursive-include src *.html *.htm *.css *.js *.gif *.png *.jpg
+
+# added by check_manifest.py
+recursive-include src *.cpt
+recursive-include src *.eps
+recursive-include src *.htc
+recursive-include src *.ico
+recursive-include src *.md
+recursive-include src *.pdf
+recursive-include src *.php
+recursive-include src *.py
+recursive-include src *.sh
+recursive-include src *.txt
+recursive-include src *.vpy
+recursive-include docs *.GPL
+recursive-include docs *.txt
