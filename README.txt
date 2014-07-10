@@ -1,4 +1,8 @@
-osha.hwctheme
-=============
+.. contents::
 
-Theme for OSHA HW Campaign 2014
+Introduction
+============
+
+This package contains the theme (skin) for the EU-OSHA Healthy Workplaces 2014-15
+campaign site.
+
