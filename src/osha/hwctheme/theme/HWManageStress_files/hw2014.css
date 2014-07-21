@@ -1100,6 +1100,13 @@ color: #B1B3B4;
 	text-align: center;
 }
 
+/* Allow for the ridiculously long descriptions of OCPs under E
+OSHA #10397 */
+.div.mediapartner.span2 {
+    min-height: 280px;
+    margin-bottom: 0.5;
+}
+
 .country img{
 	width: 70px;
 	height: 70px;
