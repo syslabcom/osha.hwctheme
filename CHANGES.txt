@@ -4,8 +4,7 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Trying to fix #10397 
 
 1.0 (2014-07-10)
 ----------------
