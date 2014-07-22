@@ -4,7 +4,7 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix mobile view #10397
 
 
 1.0.3 (2014-07-21)
