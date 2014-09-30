@@ -1606,3 +1606,51 @@ body.template-edit.portaltype-event #content ul.formTabs {
 #content #formfield-form-widgets-IEventRecurrence-recurrence {
     display: none;
 }
+
+
+/*  e-guide page  */
+#content-filters select {
+    margin: 2px 10px;
+}
+#content-filters div.pat-depends {
+  float: left;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin: 10px;
+  width: 290px;
+  background-color: #f1f1f1;
+}
+#content-filters div.pat-depends img.country {
+  width:30px;
+  height:30px;
+  float:right;
+}
+#content-filters nav.tabs {
+    display: inline-block;
+    padding: 0 15px;
+    white-space: nowrap;
+    border-radius: 11px;
+    border: 1px solid #b1b3b4;
+    color: #FFF;
+    cursor: default;
+    margin-bottom: 5px;
+    background-color: #b1b3b4;
+}
+
+#content-filters nav.tabs .language {
+    margin-left: 5px;
+    background-color: white;
+    padding: 0 8px;
+    border-radius: 11px;
+    color: #666;
+    text-transform: uppercase;
+}
+#content-filters div.pat-depends .links {
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+#content-filters div.pat-depends .links .download {
+    float: right;
+}
