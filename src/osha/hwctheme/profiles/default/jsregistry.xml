@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="javascripts registry">
+    <javascript authenticated="false" bundle="default" cacheable="true"
+        compression="safe" conditionalcomment="" cookable="true" enabled="false"
+        expression="" id="++resource++osha.hwctheme/patterns.js" inline="false"/>
+</object>
