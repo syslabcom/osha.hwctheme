@@ -1609,9 +1609,7 @@ body.template-edit.portaltype-event #content ul.formTabs {
 
 
 /*  e-guide page  */
-div.row-fluid #eguides_introtext {
-    margin-bottom: 25px;
-}
+
 div#eguides_filter p#intro_filter {
     margin: 15px 0;
 }
@@ -1621,7 +1619,10 @@ div#eguides_filter{
 #content-filters select {
     margin: 2px 20px 10px 0px;
 }
-#content-filters div.pat-depends {
+.eguides_introtext div#generic_eguide {
+    float: right;
+}
+#content-filters div.pat-depends, div#generic_eguide {
   float: left;
   border: 1px solid #f1f1f1;
   border-radius: 5px;
@@ -1630,12 +1631,12 @@ div#eguides_filter{
   width: 290px;
   background-color: #f1f1f1;
 }
-#content-filters div.pat-depends img.country {
+#content-filters div.pat-depends img.country, div#generic_eguide img.country{
   width:30px;
   height:30px;
   float:right;
 }
-#content-filters nav.tabs {
+#content-filters nav.tabs, div#generic_eguide nav.tabs {
     display: inline-block;
     padding: 0 15px;
     white-space: nowrap;
@@ -1647,7 +1648,7 @@ div#eguides_filter{
     background-color: #b1b3b4;
 }
 
-#content-filters nav.tabs .language {
+#content-filters nav.tabs .language, div#generic_eguide nav.tabs .language {
     margin-left: 5px;
     background-color: white;
     padding: 0 8px;
@@ -1655,11 +1656,14 @@ div#eguides_filter{
     color: #666;
     text-transform: uppercase;
 }
-#content-filters div.pat-depends .links {
+#content-filters div.pat-depends .links, div#generic_eguide .links {
     line-height: 30px;
     margin-top: 10px;
 }
 
-#content-filters div.pat-depends .links .download {
+#content-filters div.pat-depends .links .download, div#generic_eguide .download {
     float: right;
+}
+#content h2#eguides_filter_intro {
+    margin: 20px 0 0 0;
 }
