@@ -1619,6 +1619,14 @@ div#eguides_filter{
 #content-filters select {
     margin: 2px 20px 10px 0px;
 }
+div.eguides_introtext #download_text p {
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    padding: 7px 10px;
+    margin: 20px 20px 10px 0;
+    background-color: #F1F1F1;
+    width: 500px;
+}
 .eguides_introtext div#generic_eguide {
     float: right;
 }
