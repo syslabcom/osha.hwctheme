@@ -1625,7 +1625,7 @@ div.eguides_introtext #download_text p {
     padding: 7px 10px;
     margin: 20px 20px 10px 0;
     background-color: #F1F1F1;
-    width: 500px;
+    width: 95%;
 }
 .eguides_introtext div#generic_eguide {
     float: right;
