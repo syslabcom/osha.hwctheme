@@ -1606,3 +1606,10 @@ body.template-edit.portaltype-event #content ul.formTabs {
 #content #formfield-form-widgets-IEventRecurrence-recurrence {
     display: none;
 }
+
+/* Sharing buttons */
+
+#share {
+  margin: 3px 0 3px 20px;
+}
+
