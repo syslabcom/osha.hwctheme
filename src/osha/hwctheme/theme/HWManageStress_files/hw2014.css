@@ -1613,6 +1613,12 @@ body.template-edit.portaltype-event #content ul.formTabs {
   margin: 3px 0 3px 20px;
 }
 
+/* The FB button insists on having a line for itself at low res, overriding */
+#share .fb_iframe_widget {
+  display: inline-block !important;
+  width: auto !important;
+}
+
 
 /*  e-guide page  */
 
