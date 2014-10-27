@@ -3,6 +3,11 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="osha.hwctheme">
 
+  <browser:resourceDirectory
+        name="osha.hwctheme"
+        directory="resources"
+        />
+
   <browser:page
       for="Products.CMFPlone.interfaces.siteroot.IPloneSiteRoot"
       name="last-login"
