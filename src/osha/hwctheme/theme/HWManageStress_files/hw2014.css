@@ -431,7 +431,7 @@ body.site-sv .banner-text1 p {
 
 /*************News-Events*********************/
 
-.news-events h2, .partners h2, #content h1, .focalpoints h2{
+.news-events h2, .partners h2, #content h1, .focalpoints h2, h2#eguides_filter_intro{
 	 -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
 	border-radius: 30px 30px 0 0;
@@ -1613,3 +1613,71 @@ body.template-edit.portaltype-event #content ul.formTabs {
   margin: 3px 0 3px 20px;
 }
 
+
+/*  e-guide page  */
+
+div#eguides_filter p#intro_filter {
+    margin: 15px 0;
+}
+div#eguides_filter{
+    margin-left: 25px;
+}
+#content-filters select {
+    margin: 2px 20px 10px 0px;
+}
+div.eguides_introtext #download_text p {
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    padding: 7px 10px;
+    margin: 20px 20px 10px 0;
+    background-color: #F1F1F1;
+    width: 95%;
+}
+.eguides_introtext div#generic_eguide {
+    float: right;
+}
+#content-filters div.pat-depends, div#generic_eguide {
+  float: left;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin: 10px 20px 10px 0;
+  width: 290px;
+  background-color: #f1f1f1;
+}
+#content-filters div.pat-depends img.country, div#generic_eguide img.country{
+  width:30px;
+  height:30px;
+  float:right;
+}
+#content-filters nav.tabs, div#generic_eguide nav.tabs {
+    display: inline-block;
+    padding: 0 15px;
+    white-space: nowrap;
+    border-radius: 11px;
+    border: 1px solid #b1b3b4;
+    color: #FFF;
+    cursor: default;
+    margin-bottom: 5px;
+    background-color: #b1b3b4;
+}
+
+#content-filters nav.tabs .language, div#generic_eguide nav.tabs .language {
+    margin-left: 5px;
+    background-color: white;
+    padding: 0 8px;
+    border-radius: 11px;
+    color: #666;
+    text-transform: uppercase;
+}
+#content-filters div.pat-depends .links, div#generic_eguide .links {
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+#content-filters div.pat-depends .links .download, div#generic_eguide .download {
+    float: right;
+}
+#content h2#eguides_filter_intro {
+    margin: 20px 0 0 0;
+}

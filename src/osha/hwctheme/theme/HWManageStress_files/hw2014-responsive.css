@@ -32,6 +32,10 @@
    background-size: contain;
 }
 
+#content-filters div.pat-depends, div#generic_eguide {
+  width: 270px
+}
+
 
 }
 
@@ -340,6 +344,11 @@ body {
     min-height:auto;
 
 }
+
+#content-filters div.pat-depends, div#generic_eguide {
+  width: 80%
+}
+
 
 }
 
