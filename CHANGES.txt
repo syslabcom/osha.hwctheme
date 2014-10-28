@@ -4,7 +4,8 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add e-guide section #10700 [jcbrand, pysailor]
+- Add individual news view #10811 [deroiste, pysailor]
 
 
 1.0.4 (2014-07-22)
