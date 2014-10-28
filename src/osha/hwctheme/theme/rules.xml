@@ -88,6 +88,8 @@
     <replace css:theme="div#introducction h1" css:content="h1.documentFirstHeading"/>
     <!-- SubContent type-->
     <replace css:theme="div#content h1" css:content="h1.documentFirstHeading"/>
+    <!-- share buttons-->
+    <after css:theme="div#content h1" css:content="#share"/>
 
     <!-- Main Content -->
     <!-- Description et al -->
