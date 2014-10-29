@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.6 (2014-10-29)
+------------------
+
+- Don't format caption on images (news detail view) as link
+
 1.0.5 (2014-10-28)
 ------------------
 

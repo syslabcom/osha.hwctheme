@@ -1427,6 +1427,10 @@ dl.error > dt,
     font-size: 80%;
 }
 
+#content div.newsImageContainer a{
+    text-decoration: none;
+}
+
 #content .documentDescription{
     font-weight: bold;
 	margin-bottom: 2em;
