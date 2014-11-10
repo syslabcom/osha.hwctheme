@@ -4,8 +4,7 @@ Changelog
 1.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- deactivate partner application form #10874
 
 1.0.6 (2014-10-29)
 ------------------
