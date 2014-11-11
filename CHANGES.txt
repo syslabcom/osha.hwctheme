@@ -4,8 +4,7 @@ Changelog
 1.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- OSHA wants to reactivate the OCP application form again #10874 [pysailor]
 
 1.0.7 (2014-11-10)
 ------------------
