@@ -41,9 +41,7 @@
     <replace theme="/html/head/meta[@name='description']" content="/html/head/meta[@name='description']"/>
     <replace theme="/html/head/base" content="/html/head/base"/>
     <replace theme="/html/head/title" content="/html/head/title"/>
-    <append theme="/html/head" content="/html/head/meta[@property='og:url']"/>
-    <append theme="/html/head" content="/html/head/meta[@property='og:image']"/>
-    <append theme="/html/head" content="/html/head/meta[@property='og:title']"/>
+    <append theme="/html/head" css:content="meta[property^='og:']"/>
 
     <replace css:theme="#logo-container" css:content="#logo-container"/>
     <after theme-children="/html/head" css:content="link[rel='home']"/>
