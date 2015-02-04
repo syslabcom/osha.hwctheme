@@ -34,4 +34,12 @@
     permission="zope2.View"
     />
 
+  <browser:viewlet
+      name="opengraph"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      template="viewlets/opengraph.pt"
+      permission="zope2.View"
+      />
+
 </configure>
