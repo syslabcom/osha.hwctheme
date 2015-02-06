@@ -1,0 +1,3 @@
+<meta property="og:url" tal:attributes="content context/absolute_url" />
+<meta property="og:title" tal:attributes="content context/title" />
+<meta property="og:image" content="https://www.healthy-workplaces.eu/++theme++osha.hwctheme/HWManageStress_files/images/logo_en.png" />
