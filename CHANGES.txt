@@ -4,8 +4,7 @@ Changelog
 1.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
-
+- Reduce file size of banner image on home page #11008 [pysailor]
 
 1.0.9 (2015-02-09)
 ------------------
