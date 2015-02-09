@@ -4,8 +4,7 @@ Changelog
 1.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- For #10974 Add opengraph metadata to the header [deroiste]
 
 1.0.8 (2014-11-11)
 ------------------
