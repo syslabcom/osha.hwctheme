@@ -12,6 +12,7 @@
         <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.portaltype-event" />
     </rules>
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-news-item" />
+    <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-remote-news-item" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-event" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-organisation" />
     <theme href="HWManageStressSubContentFullFullText.htm" css:if-content="body.template-osha-hwccontent-mediapartner" />

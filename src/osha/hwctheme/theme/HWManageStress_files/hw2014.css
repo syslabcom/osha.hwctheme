@@ -533,6 +533,9 @@ body.site-sv .banner-text1 p {
 	background: #666;
 	}
 
+#content em.newsdate {
+    float: right;
+}
 
 /************partners**********/
 
