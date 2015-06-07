@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.0.11 (unreleased)
+1.0.11 (2015-06-07)
 -------------------
 
-- Nothing changed yet.
+- For #11506 make sure remote news details page has same template as local news.
+  Also, format date nicer [pysailor]
 
 
 1.0.10 (2015-02-09)
