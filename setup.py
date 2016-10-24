@@ -1,7 +1,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.0.12'
+version = '1.0.13.dev0'
 
 long_description = (
     open('README.txt').read()
