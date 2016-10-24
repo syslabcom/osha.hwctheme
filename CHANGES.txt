@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.12 (unreleased)
+1.0.12 (2016-10-24)
 -------------------
 
 - SC-382: add years to old campaign websites
