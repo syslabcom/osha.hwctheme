@@ -20,7 +20,10 @@
         </a>
       </div>
 
-      <div id="tagline" i18n:translate="campaign_slogan">Healthy Workplaces Manage Stress.</div>
+      <div id="tagline"><em>Campaign: <tal:old i18n:translate="campaign_name">Healthy Workplaces</tal:old> 2014-2015</em><br/>
+      <tal:slogan i18n:translate="campaign_slogan">Healthy Workplaces Manage Stress.</tal:slogan>
+    </div>
+
     </div>
 
     <div tal:condition="hw_view/get_len_translations" id="select_language"><tal:label i18n:translate="label_select_language">Select your language</tal:label>:</div>
